@@ -1,0 +1,35 @@
+/* Estilo general del footer */
+footer {
+    background-color: #f5f5dc; /* Fondo beige similar a la imagen */
+    color: #333;
+}
+
+.footer-logo {
+    width: 60px; /* Ajusta el tamaño del logo */
+}
+
+/* Estilo para los títulos de las secciones */
+footer h4 {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Estilo de iconos de redes sociales */
+.social-icon {
+    color: #333;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #007ad9; /* Cambia de color al pasar el mouse */
+}
+
+hr.surface-border {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}

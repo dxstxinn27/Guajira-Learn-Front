@@ -1,0 +1,46 @@
+/* Estilo para adaptar la imagen de fondo */
+.content-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Toma todo el espacio vertical */
+    background-image: url('https://uniguajira.edu.co/wp-content/uploads/2024/06/Naturaleza_Uniguajira.jpg'); /* Ajusta la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .user-type-selection {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para mejorar la legibilidad */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+  }
+  
+  .user-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2a23e;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 120px;
+    height: 100px;
+  }
+  
+  .user-button mat-icon {
+    font-size: 36px;
+    margin-bottom: 5px;
+  }
+  

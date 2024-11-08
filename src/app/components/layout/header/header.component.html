@@ -1,0 +1,40 @@
+<p-toolbar styleClass="bg-gray-900 shadow-2" [style]="{ 
+    'border-radius': '0.5rem', 
+    'background-image': 'linear-gradient(to right, rgba(96,169,185,1), rgba(50,90,100,1))' 
+}">
+    <ng-template pTemplate="start">
+        <div class="flex align-items-center gap-2">
+            <p-avatar
+                image="https://files.oaiusercontent.com/file-XXldV32oDmURMN3cR81eDqSp?se=2024-11-04T05%3A35%3A21Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D4c591c33-96a5-4821-8214-7137615b690e.webp&sig=7h%2BTD199fuYDFJJumvPCyrJa%2BEuLnUqF/HoXu92SFKA%3D"
+                shape="circle" [style]="{ width: '3rem', height: '3rem' }"></p-avatar>
+        </div>
+    </ng-template>
+
+    <ng-template pTemplate="center">
+        <span class="font-bold text-bluegray-50">
+            <a href="/content"><h1>Guajira Learn</h1></a>
+        </span>
+    </ng-template>
+    <ng-template pTemplate="end">
+        <div class="flex flex-wrap align-items-center gap-3">
+            <!-- <button class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200">
+                    <i class="pi pi-home text-2xl"></i>
+                </button> -->
+            <button (click)="scrollToBottom()"
+                class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200">
+                <i class="pi pi-envelope text-2xl"></i>
+            </button>
+
+        </div>
+    </ng-template>
+    <!-- <ng-template pTemplate="end">
+            <div class="flex align-items-center gap-2">
+                <p-avatar 
+                    image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" 
+                    shape="circle" />
+                <span class="font-bold text-bluegray-50">
+                    Guajira Learn
+                </span>
+            </div>
+        </ng-template> -->
+</p-toolbar>

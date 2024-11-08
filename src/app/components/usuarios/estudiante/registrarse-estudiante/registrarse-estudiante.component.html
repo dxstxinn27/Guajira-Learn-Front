@@ -1,0 +1,107 @@
+<p-card header="Registrar Estudiante" [style]="{ width: '100%' }">
+    <ng-template pTemplate="header">
+
+    </ng-template>
+    <div>
+        <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()" class="p-3 bg-faded">
+
+            <div class="grid">
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                        <input class="w-12" type="text" pInputText formControlName="nombre"
+                            placeholder="nombreEstudiante" title="nombreEstudiante">
+                    </div>
+                </div>
+
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                        <input class="w-12" type="text" pInputText formControlName="apellido"
+                            placeholder="apellidoEstudiante" title="apellidoEstudiante">
+                    </div>
+                </div>
+
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-star"></i></span>
+                        <select class="w-12" pInputText formControlName="tipo_id" title="tipo_id">
+                            <option value="CÉDULA DE CIUDADANÍA">Cédula de Ciudadanía</option>
+                            <option value="TARJETA DE IDENTIDAD">Tarjeta de Identidad</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-phone"></i></span>
+                        <input class="w-12" type="number" pInputText formControlName="numero_id" placeholder="numero_id"
+                            title="numero_id">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <!-- <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-phone"></i></span>
+                        <input class="w-12" type="text" pInputText formControlName="carrera"
+                            placeholder="carrera" title="carrera">
+                    </div>
+                </div> -->
+
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-star"></i></span>
+                        <select class="w-12" pInputText formControlName="carrera" title="carrera">
+                            <option value="INGENIERÍA DE SISTEMAS">Ingeniería de Sistemas</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-phone"></i></span>
+                        <input class="w-12" type="number" pInputText formControlName="semestre"
+                            placeholder="semestre" title="semestre">
+                    </div>
+                </div>
+
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1 ">
+                        <span class="p-inputgroup-addon"><i class="pi pi-bookmark"></i></span>
+                        <input class="w-12" type="email" pInputText formControlName="correo" placeholder="correo"
+                            title="correo">
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="grid">
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1 ">
+                        <span class="p-inputgroup-addon"><i class="pi pi-comments"></i></span>
+                        <input class="w-12" type="password" pInputText formControlName="contraseña"
+                            placeholder="contraseña" title="contraseña">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-content-center flex-wrap">
+                <button pButton pRipple label="Guardar" icon="pi pi-save" severity="info" class="mr-4"
+                    type="submit"></button>
+
+                <button pButton pRipple label="Cancelar" icon="pi pi-times-circle" severity="warning" class="mr-4"
+                    type="button" (click)="cancel()"></button>
+            </div>
+
+
+        </form>
+
+    </div>
+    <ng-template pTemplate="footer">
+
+    </ng-template>
+</p-card>
