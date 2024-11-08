@@ -1,0 +1,42 @@
+main {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "header header header header header"
+        "section section section section section"
+        "footer footer footer footer footer";
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+}
+
+section {
+    grid-area: section;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+footer {
+    grid-area: footer;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.field-margin {
+    margin-bottom: 1.5rem; /* Espaciado entre campos */
+}
+
+.session-button {
+    background-color: #60a9b9 !important; /* Color personalizado para Iniciar Sesión */
+    border-color: #60a9b9 !important;
+    color: white;
+}
+
+.register-button {
+    background-color: #e2a23e !important; /* Color personalizado para Registrarse */
+    border-color: #e2a23e !important;
+    color: white;
+}
+
+

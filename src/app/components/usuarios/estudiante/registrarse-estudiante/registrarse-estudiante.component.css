@@ -1,0 +1,24 @@
+main {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "header header header header header"
+        "section section section section section"
+        "footer footer footer footer footer";
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+}
+
+section {
+    grid-area: section;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+footer {
+    grid-area: footer;
+    border: 1px solid rgb(255, 255, 255);
+}

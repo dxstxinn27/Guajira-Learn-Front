@@ -8,6 +8,7 @@ import { CrearAsignaturaComponent } from './components/cursos/asignatura/crear-a
 import { CrearTemaComponent } from './components/cursos/tema/crear-tema/crear-tema.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { InicioEstudianteComponent } from './components/usuarios/estudiante/inicio-estudiante/inicio-estudiante.component';
+import { InicioDocenteComponent } from './components/usuarios/docente/inicio-docente/inicio-docente.component';
 
 export const routes: Routes = [
     { 
@@ -28,6 +29,7 @@ export const routes: Routes = [
     // DOCENTE
     { path: "usuarios/docente/iniciar-sesion", component: IniciarSesionDocenteComponent },
     { path: "usuarios/docente/registrarse", component: RegistrarseDocenteComponent },
+    { path: "usuarios/docente/inicio", component: InicioDocenteComponent},
 
     // ASIGNATURA
     { path: "cursos/asignatura/crear", component: CrearAsignaturaComponent },

@@ -1,1 +1,47 @@
-<p>iniciar-sesion-docente works!</p>
+<main>
+    <header>
+        <app-header></app-header>
+    </header>
+
+    <section>
+        <div class="card">
+            <div class="flex flex-column md:flex-row">
+                <div class="w-full md:w-5 flex flex-column align-items-center justify-content-center gap-3 py-5">
+                    <h1>Docente</h1>
+                    <p-floatLabel class="field-margin">
+                        <input pInputText id="correo" [(ngModel)]="correo" />
+                        <label for="correo">Correo</label>
+                    </p-floatLabel>
+
+                    <p-floatLabel class="field-margin">
+                        <p-password id="password" [(ngModel)]="password" [feedback]="false" />
+                        <label for="password">Contraseña</label>
+                    </p-floatLabel>
+
+                    <p-button label="Iniciar Sesión" icon="pi pi-user" styleClass="w-full session-button"
+                        (click)="login()" />
+                </div>
+
+                <div class="w-full md:w-2">
+                    <p-divider layout="vertical" styleClass="hidden md:flex">
+                        <b>O</b>
+                    </p-divider>
+                    <p-divider layout="horizontal" styleClass="flex md:hidden" [align]="'center'">
+                        <b>O</b>
+                    </p-divider>
+                </div>
+
+                <div class="w-full md:w-5 flex align-items-center justify-content-center py-5">
+                    <p-button label="Registrarse" icon="pi pi-user-plus"
+                        styleClass="p-button-success w-full register-button"
+                        [routerLink]="['/usuarios/docente/registrarse']" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+
+</main>

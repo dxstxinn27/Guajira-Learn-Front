@@ -8,11 +8,13 @@ import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { ReactiveFormsModule, FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import {ToastModule} from 'primeng/toast';
+import { FooterComponent } from '../../../layout/footer/footer.component';
+import { HeaderComponent } from '../../../layout/header/header.component';
 
 @Component({
   selector: 'app-registrarse-estudiante',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, ToastModule, CardModule, ButtonModule],
+  imports: [CommonModule, ReactiveFormsModule, ToastModule, CardModule, ButtonModule, FooterComponent, HeaderComponent],
   templateUrl: './registrarse-estudiante.component.html',
   styleUrl: './registrarse-estudiante.component.css'
 })

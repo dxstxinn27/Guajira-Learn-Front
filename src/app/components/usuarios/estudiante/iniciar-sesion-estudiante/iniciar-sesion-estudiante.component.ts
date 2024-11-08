@@ -8,11 +8,13 @@ import { FormsModule } from '@angular/forms';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { Router } from '@angular/router';
 import { EstudianteService } from '../../../../services/usuarios/estudiante.service';
+import { FooterComponent } from '../../../layout/footer/footer.component';
+import { HeaderComponent } from '../../../layout/header/header.component';
 
 @Component({
   selector: 'app-iniciar-sesion-estudiante',
   standalone: true,
-  imports: [DividerModule, ButtonModule, InputTextModule, RouterModule, PasswordModule, FormsModule, FloatLabelModule],
+  imports: [DividerModule, ButtonModule, InputTextModule, RouterModule, PasswordModule, FormsModule, FloatLabelModule, FooterComponent, HeaderComponent],
   templateUrl: './iniciar-sesion-estudiante.component.html',
   styleUrl: './iniciar-sesion-estudiante.component.css'
 })
