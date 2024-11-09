@@ -1,19 +1,22 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
-import { FooterComponent } from '../../../layout/footer/footer.component';
 import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-inicio-estudiante',
+  selector: 'app-semestre2',
   standalone: true,
-  imports: [FooterComponent, CommonModule],
-  templateUrl: './inicio-estudiante.component.html',
-  styleUrl: './inicio-estudiante.component.css'
+  imports: [CommonModule],
+  templateUrl: './semestre2.component.html',
+  styleUrl: './semestre2.component.css'
 })
-export class InicioEstudianteComponent implements OnInit {
+export class Semestre2Component implements OnInit {
   lessons = [
-    { nombre: '1er semestre', estado: 'Ir', ruta:'semestres/semestre1' },
-    { nombre: '2do semestre', estado: 'Ir', ruta:'semestres/semestre2' },
+    { nombre: 'Cálculo Integral', estado: 'Iniciar', ruta: '' },
+    { nombre: 'Física Mecánica', estado: 'Iniciar', ruta: '' },
+    { nombre: 'Álgebra Lineal', estado: 'Iniciar', ruta: '' },
+    { nombre: 'Algoritmo y Programación II', estado: 'Iniciar', ruta: '' },
+    { nombre: 'Competencia Comunicativa II', estado: 'Iniciar', ruta: '' },
+    { nombre: 'Humanidades', estado: 'Iniciar', ruta: '' },
   ];
 
   constructor(private router: Router) {}
@@ -52,4 +55,5 @@ export class InicioEstudianteComponent implements OnInit {
   navegar(ruta: string): void {
     this.router.navigate([ruta]);
   }
+
 }

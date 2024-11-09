@@ -10,13 +10,13 @@
     </aside>
   
     <section class="content">
-      <h2>Lecciones</h2>
+      <h2>LECCIONES</h2>
       <div class="lessons-grid">
         <div class="lesson-card" *ngFor="let lesson of lessons">
           <h3>{{ lesson.nombre }}</h3>
-          <button class="lesson-button">{{ lesson.estado }}</button>
+          <button class="lesson-button" (click)="navegar(lesson.ruta)">{{ lesson.estado }}</button>
         </div>
-      </div>
+      </div>      
     </section>
   
     <aside class="sidebar-right">

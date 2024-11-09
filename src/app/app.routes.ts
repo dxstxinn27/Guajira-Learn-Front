@@ -9,6 +9,20 @@ import { CrearTemaComponent } from './components/cursos/tema/crear-tema/crear-te
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { InicioEstudianteComponent } from './components/usuarios/estudiante/inicio-estudiante/inicio-estudiante.component';
 import { InicioDocenteComponent } from './components/usuarios/docente/inicio-docente/inicio-docente.component';
+import { Semestre1Component } from './components/semestres/semestre1/semestre1.component';
+import { Semestre2Component } from './components/semestres/semestre2/semestre2.component';
+import { Competencia1Component } from './components/lecciones/competencia1/competencia1.component';
+import { Calculo1Component } from './components/lecciones/calculo1/calculo1.component';
+import { LogicaComponent } from './components/lecciones/logica/logica.component';
+import { IntroduccionComponent } from './components/lecciones/introduccion/introduccion.component';
+import { Algoritmo1Component } from './components/lecciones/algoritmo1/algoritmo1.component';
+import { CatedraComponent } from './components/lecciones/catedra/catedra.component';
+import { Calculo2Component } from './components/lecciones/calculo2/calculo2.component';
+import { Fisica1Component } from './components/lecciones/fisica1/fisica1.component';
+import { AlgebraComponent } from './components/lecciones/algebra/algebra.component';
+import { Algoritmo2Component } from './components/lecciones/algoritmo2/algoritmo2.component';
+import { Competencia2Component } from './components/lecciones/competencia2/competencia2.component';
+import { HumanidadesComponent } from './components/lecciones/humanidades/humanidades.component';
 
 export const routes: Routes = [
     { 
@@ -36,4 +50,23 @@ export const routes: Routes = [
 
     // TEMA
     { path: "cursos/tema/crear", component: CrearTemaComponent },
+
+    // SEMESTRES
+    {path: "semestres/semestre1", component: Semestre1Component},
+    {path: "semestres/semestre2", component: Semestre2Component},
+
+    // LECCIONES
+    {path: "lecciones/calculo1", component: Calculo1Component},
+    {path: "lecciones/logica", component: LogicaComponent},
+    {path: "lecciones/introduccion", component: IntroduccionComponent},
+    {path: "lecciones/algoritmo1", component: Algoritmo1Component},
+    {path: "lecciones/competencia1", component: Competencia1Component},
+    {path: "lecciones/catedra", component: CatedraComponent},
+    {path: "lecciones/calculo2", component: Calculo2Component},
+    {path: "lecciones/fisica1", component: Fisica1Component},
+    {path: "lecciones/algebra", component: AlgebraComponent},
+    {path: "lecciones/algoritmo2", component: Algoritmo2Component},
+    {path: "lecciones/competencia2", component: Competencia2Component},
+    {path: "lecciones/humanidades", component: HumanidadesComponent},
+
 ];
