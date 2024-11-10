@@ -44,7 +44,11 @@ export class Semestre1Component implements OnInit {
   }
 
   cerrarSesion(): void {
-    console.log('Sesión cerrada');
+    // Limpiar el localStorage y redirigir al inicio de sesión
+    localStorage.removeItem('estudianteId');
+    localStorage.removeItem('token');
+    // localStorage.removeItem('isDarkMode');
+    this.router.navigate(['usuarios/estudiante/iniciar-sesion']);
   }
 
   toggleDarkMode(): void {

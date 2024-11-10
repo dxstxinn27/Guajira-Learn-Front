@@ -2,22 +2,20 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 import { FooterComponent } from '../../../layout/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { EstudianteService } from '../../../../services/usuarios/estudiante.service';
+import { EstudianteI } from '../../../../models/usuarios';
 
 @Component({
-  selector: 'app-inicio-estudiante',
+  selector: 'app-perfil-estudiante',
   standalone: true,
-  imports: [FooterComponent, CommonModule],
-  templateUrl: './inicio-estudiante.component.html',
-  styleUrl: './inicio-estudiante.component.css'
+  imports: [CommonModule],
+  templateUrl: './perfil-estudiante.component.html',
+  styleUrl: './perfil-estudiante.component.css'
 })
-export class InicioEstudianteComponent implements OnInit {
-  lessons = [
-    { nombre: '1er semestre', estado: 'Ir', ruta: 'semestres/semestre1' },
-    { nombre: '2do semestre', estado: 'Ir', ruta: 'semestres/semestre2' },
-  ];
-
-  constructor(private router: Router) { }
-
+export class PerfilEstudianteComponent implements OnInit {
+  estudiante: EstudianteI | null = null;
+  constructor(private router: Router, private estudianteService: EstudianteService) {}
+  
   racha = 0;
   cactusCoins = 0.0;
   fechaActual = new Date();
@@ -25,8 +23,27 @@ export class InicioEstudianteComponent implements OnInit {
   isDarkMode = false;
 
   ngOnInit(): void {
+    const estudianteId = localStorage.getItem('estudianteId');
+    console.log('ID del estudiante obtenido:', estudianteId);
+    if (estudianteId) {
+      this.estudianteService.getOneEstudiante(+estudianteId).subscribe({
+        next: (data) => {
+          console.log('Datos del estudiante:', data);  // Verifica qué datos estás recibiendo
+          this.estudiante = data.estudiante;  // Accede a la propiedad "estudiante"
+        },
+        error: (error) => {
+          console.error('Error al obtener los datos del estudiante:', error);
+        }
+      });
+    }
+
     this.cargarEstadoDarkMode();
     this.generarCalendario();
+  }
+
+  editarPerfil(): void {
+    // Add functionality to edit the profile
+    console.log('Edit profile');
   }
 
   cargarEstadoDarkMode(): void {

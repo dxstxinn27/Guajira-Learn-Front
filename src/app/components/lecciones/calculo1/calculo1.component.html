@@ -1,201 +1,223 @@
 <main class="main-layout" [ngClass]="{ 'dark-mode': isDarkMode }">
-    <aside class="sidebar">
-        <h2>GUAJIRA LEARN</h2>
-        <button class="menu-button" style="background-color: #e2a23e;">Estudiar</button>
-        <button class="menu-button" style="background-color: #e2a23e;">Clasificación</button>
-        <button class="menu-button" style="background-color: #e2a23e;">Tienda</button>
-        <button class="menu-button" style="background-color: #e2a23e;">Perfil</button>
-        <div class="spacer"></div>
-        <button class="logout-button" (click)="cerrarSesion()">Cerrar sesión</button>
-    </aside>
+  <aside class="sidebar">
+    <h2>GUAJIRA LEARN</h2>
+    <button class="menu-button" style="background-color: #e2a23e;"
+      (click)="navegar('usuarios/estudiante/inicio')">Estudiar</button>
+    <button class="menu-button" style="background-color: #e2a23e;">Clasificación</button>
+    <button class="menu-button" style="background-color: #e2a23e;">Tienda</button>
+    <button class="menu-button" style="background-color: #e2a23e;"
+      (click)="navegar('usuarios/estudiante/perfil')">Perfil</button>
+    <div class="spacer"></div>
+    <button class="logout-button" (click)="cerrarSesion()">Cerrar sesión</button>
+  </aside>
 
-    <section class="content">
-        <h2>CALCULO DIFERENCIAL</h2>
+  <section class="content">
+    <h2>CALCULO DIFERENCIAL</h2>
 
-        <div class="question-form">
-            
-            <div class="question">
-                <p><strong>1. ¿Cuál de las siguientes es la definición correcta de la integral definida de una función f(x) en el intervalo [a,b]?</strong></p>
-                <label>
-                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="A" /> A) La suma de los valores de f(x) en el intervalo.
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="B" /> B) El área bajo la curva de f(x) entre a y b.
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="C" /> C) La derivada de f(x) en el intervalo [a,b].
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="D" /> D) El límite de la función cuando x→b.
-                  </label>
-            </div>
+    <div class="question-form">
 
-            <div class="question">
-                <p><strong>2. ¿Qué representa el teorema fundamental del cálculo?</strong></p>
-                <label>
-                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="A" /> A) La relación entre la derivada y la integral de una función.
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="B" /> B) La suma infinita de áreas bajo la curva de una función. 
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="C" /> C) La relación entre límites y continuidad.
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="D" /> D) La fórmula de derivación por partes.
-                  </label>
-            </div>
+      <div class="question">
+        <p><strong>1. ¿Cuál de las siguientes es la definición correcta de la integral definida de una función f(x) en
+            el intervalo [a,b]?</strong></p>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="A" /> A) La suma de los valores de
+          f(x) en el intervalo.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="B" /> B) El área bajo la curva de
+          f(x) entre a y b.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="C" /> C) La derivada de f(x) en el
+          intervalo [a,b].
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="D" /> D) El límite de la función
+          cuando x→b.
+        </label>
+      </div>
 
-            <div class="question">
-                <p><strong>3. ¿Cuál de las siguientes opciones es la integral indefinida de sin(x)?</strong></p>
-                <label>
-                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="A" /> A) -cos(x)+C
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="B" /> B) cos(x)+C
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="C" /> C) -sin(x)+C
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="D" /> D) tan(x)+C
-                  </label>
-            </div>
+      <div class="question">
+        <p><strong>2. ¿Qué representa el teorema fundamental del cálculo?</strong></p>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="A" /> A) La relación entre la
+          derivada y la integral de una función.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="B" /> B) La suma infinita de áreas
+          bajo la curva de una función.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="C" /> C) La relación entre límites y
+          continuidad.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="D" /> D) La fórmula de derivación por
+          partes.
+        </label>
+      </div>
 
-            <div class="question">
-                <p><strong>4. ¿Cuál es el resultado de la integral definida ∫0π sin(x) dx?</strong></p>
-                <label>
-                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="A" /> A) 1
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="B" /> B) 2
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="C" /> C) 0
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="D" /> D) 2π
-                  </label>
-            </div>
+      <div class="question">
+        <p><strong>3. ¿Cuál de las siguientes opciones es la integral indefinida de sin(x)?</strong></p>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="A" /> A) -cos(x)+C
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="B" /> B) cos(x)+C
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="C" /> C) -sin(x)+C
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="D" /> D) tan(x)+C
+        </label>
+      </div>
 
-            <div class="question">
-                <p><strong>5. ¿Qué método de integración es más adecuado para calcular ∫xe x dx?</strong></p>
-                <label>
-                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="A" /> A) Sustitución.
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="B" /> B) Por partes.
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="C" /> C) Integral definida.
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="D" /> D) Cambio de variables.
-                  </label>
-            </div>
+      <div class="question">
+        <p><strong>4. ¿Cuál es el resultado de la integral definida ∫0π sin(x) dx?</strong></p>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="A" /> A) 1
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="B" /> B) 2
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="C" /> C) 0
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="D" /> D) 2π
+        </label>
+      </div>
 
-            <div class="question">
-                <p><strong>6. ¿Cuál de los siguientes es el método adecuado para calcular el área entre dos curvas y=f(x) y y=g(x) en el intervalo [a,b]?</strong></p>
-                <label>
-                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="A" /> A) ∫ ab [f(x)+g(x)]dx.
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="B" /> B) ∫ ab |f(x)-g(x)|dx.
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="C" /> C) ∫ ab f(x)g(x)dx.
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="D" /> D) ∫ ab [f(x)-g(x)]dx.
-                  </label>
-            </div>
+      <div class="question">
+        <p><strong>5. ¿Qué método de integración es más adecuado para calcular ∫xe x dx?</strong></p>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="A" /> A) Sustitución.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="B" /> B) Por partes.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="C" /> C) Integral definida.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="D" /> D) Cambio de variables.
+        </label>
+      </div>
 
-            <div class="question">
-                <p><strong>7. La técnica de integración por sustitución se basa en:</strong></p>
-                <label>
-                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="A" /> A) Cambiar los límites de integración.
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="B" /> B) Reemplazar una variable para simplificar la integral.
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="C" /> C) Dividir el área bajo la curva.
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="D" /> D) Aplicar el teorema fundamental del cálculo.
-                  </label>
-            </div>
+      <div class="question">
+        <p><strong>6. ¿Cuál de los siguientes es el método adecuado para calcular el área entre dos curvas y=f(x) y
+            y=g(x) en el intervalo [a,b]?</strong></p>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="A" /> A) ∫ ab [f(x)+g(x)]dx.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="B" /> B) ∫ ab |f(x)-g(x)|dx.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="C" /> C) ∫ ab f(x)g(x)dx.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="D" /> D) ∫ ab [f(x)-g(x)]dx.
+        </label>
+      </div>
 
-            <div class="question">
-                <p><strong>8. ¿Cuál es la integral indefinida de 1/x?</strong></p>
-                <label>
-                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="A" /> A) ln(x)+C
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="B" /> B) x -1 +C
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="C" /> C) ln(|x|)+C
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="D" /> D) e x +C
-                  </label>
-            </div>
+      <div class="question">
+        <p><strong>7. La técnica de integración por sustitución se basa en:</strong></p>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="A" /> A) Cambiar los límites de
+          integración.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="B" /> B) Reemplazar una variable para
+          simplificar la integral.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="C" /> C) Dividir el área bajo la
+          curva.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="D" /> D) Aplicar el teorema
+          fundamental del cálculo.
+        </label>
+      </div>
 
-            <div class="question">
-                <p><strong>9. Para resolver ∫e 3x dx, ¿cuál es el primer paso adecuado?</strong></p>
-                <label>
-                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="A" /> A) Multiplicar por 3.
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="B" /> B) Usar integración por partes.
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="C" /> C) Aplicar la regla de cadena con u=3x.
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="D" /> D) Reemplazar e 3x por e x.
-                  </label>
-            </div>
+      <div class="question">
+        <p><strong>8. ¿Cuál es la integral indefinida de 1/x?</strong></p>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="A" /> A) ln(x)+C
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="B" /> B) x -1 +C
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="C" /> C) ln(|x|)+C
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="D" /> D) e x +C
+        </label>
+      </div>
 
-            <div class="question">
-                <p><strong>10. ¿Qué representa el valor de una integral de f(x) en un intervalo cuando f(x) es negativa en ese intervalo?</strong></p>
-                <label>
-                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="A" /> A) El área bajo la curva, que siempre es positiva.
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="B" /> B) Un valor negativo que representa el área bajo la curva.
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="C" /> C) Un valor positivo, ya que el área es positiva independientemente del signo de f(x).
-                  </label>
-                  <label>
-                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="D" /> D) La distancia desde el eje x.
-                  </label>
-            </div>
+      <div class="question">
+        <p><strong>9. Para resolver ∫e 3x dx, ¿cuál es el primer paso adecuado?</strong></p>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="A" /> A) Multiplicar por 3.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="B" /> B) Usar integración por partes.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="C" /> C) Aplicar la regla de cadena
+          con u=3x.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="D" /> D) Reemplazar e 3x por e x.
+        </label>
+      </div>
 
-            <button (click)="submitForm()">Enviar</button>
+      <div class="question">
+        <p><strong>10. ¿Qué representa el valor de una integral de f(x) en un intervalo cuando f(x) es negativa en ese
+            intervalo?</strong></p>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="A" /> A) El área bajo la curva, que
+          siempre es positiva.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="B" /> B) Un valor negativo que
+          representa el área bajo la curva.
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="C" /> C) Un valor positivo, ya que
+          el área es positiva independientemente del signo de f(x).
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="D" /> D) La distancia desde el eje
+          x.
+        </label>
+      </div>
 
-        </div>
+      <button (click)="submitForm()">Enviar</button>
 
-    </section>
+    </div>
 
-    <aside class="sidebar-right">
-        <div class="status-icons">
-            <p>🔥 {{ racha }} 🌵 {{ cactusCoins }}</p>
-            <div class="theme-toggle">
-                <button (click)="toggleDarkMode()" class="switch" [ngClass]="{ 'active': isDarkMode }">
-                    <span class="slider"></span>
-                </button>
-                <label>🌙 Tema oscuro</label>
-            </div>
-        </div>
-        <div class="calendar-container">
-            <h3 class="calendar-title">Calendario</h3>
-            <p class="calendar-date">{{ fechaActual | date:'MMMM yyyy' }}</p>
-            <div class="calendar-grid">
-                <span *ngFor="let day of diasMes">{{ day }}</span>
-            </div>
-        </div>
-    </aside>
+  </section>
+
+  <aside class="sidebar-right">
+    <div class="status-icons">
+      <p>🔥 {{ racha }} 🌵 {{ cactusCoins }}</p>
+      <div class="theme-toggle">
+        <button (click)="toggleDarkMode()" class="switch" [ngClass]="{ 'active': isDarkMode }">
+          <span class="slider"></span>
+        </button>
+        <label>🌙 Tema oscuro</label>
+      </div>
+    </div>
+    <div class="calendar-container">
+      <h3 class="calendar-title">Calendario</h3>
+      <p class="calendar-date">{{ fechaActual | date:'MMMM yyyy' }}</p>
+      <div class="calendar-grid">
+        <span *ngFor="let day of diasMes">{{ day }}</span>
+      </div>
+    </div>
+  </aside>
 </main>

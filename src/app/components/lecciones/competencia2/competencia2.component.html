@@ -1,104 +1,151 @@
 <main class="main-layout" [ngClass]="{ 'dark-mode': isDarkMode }">
     <aside class="sidebar">
         <h2>GUAJIRA LEARN</h2>
-        <button class="menu-button" style="background-color: #e2a23e;">Estudiar</button>
+        <button class="menu-button" style="background-color: #e2a23e;"
+            (click)="navegar('usuarios/estudiante/inicio')">Estudiar</button>
         <button class="menu-button" style="background-color: #e2a23e;">Clasificación</button>
         <button class="menu-button" style="background-color: #e2a23e;">Tienda</button>
-        <button class="menu-button" style="background-color: #e2a23e;">Perfil</button>
+        <button class="menu-button" style="background-color: #e2a23e;"
+            (click)="navegar('usuarios/estudiante/perfil')">Perfil</button>
         <div class="spacer"></div>
         <button class="logout-button" (click)="cerrarSesion()">Cerrar sesión</button>
     </aside>
 
     <section class="content">
         <h2>Examen de Competencia Comunicativa II</h2>
-    
+
         <div class="question-form">
-    
+
             <div class="question">
-                <p><strong>1. ¿Qué tipo de texto se utiliza generalmente para persuadir al receptor a adoptar una idea o punto de vista?</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="A" /> A) Descriptivo.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="B" /> B) Narrativo.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="C" /> C) Argumentativo.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="D" /> D) Expositivo.</label>
+                <p><strong>1. ¿Qué tipo de texto se utiliza generalmente para persuadir al receptor a adoptar una idea o
+                        punto de vista?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="A" /> A)
+                    Descriptivo.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="B" /> B)
+                    Narrativo.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="C" /> C)
+                    Argumentativo.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="D" /> D)
+                    Expositivo.</label>
             </div>
-    
+
             <div class="question">
-                <p><strong>2. En un texto argumentativo, la <strong>tesis</strong> se presenta normalmente en:</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="A" /> A) La conclusión.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="B" /> B) La introducción.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="C" /> C) El desarrollo.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="D" /> D) La argumentación.</label>
+                <p><strong>2. En un texto argumentativo, la <strong>tesis</strong> se presenta normalmente en:</strong>
+                </p>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="A" /> A) La
+                    conclusión.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="B" /> B) La
+                    introducción.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="C" /> C) El
+                    desarrollo.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="D" /> D) La
+                    argumentación.</label>
             </div>
-    
+
             <div class="question">
-                <p><strong>3. ¿Cuál de las siguientes es una característica principal de un <strong>ensayo académico</strong>?</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="A" /> A) Expone una opinión personal sobre un tema específico.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="B" /> B) Utiliza un lenguaje informal para involucrar al lector.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="C" /> C) Tiene como principal objetivo entretener.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="D" /> D) Se enfoca en contar una historia ficticia.</label>
+                <p><strong>3. ¿Cuál de las siguientes es una característica principal de un <strong>ensayo
+                            académico</strong>?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="A" /> A) Expone una
+                    opinión personal sobre un tema específico.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="B" /> B) Utiliza un
+                    lenguaje informal para involucrar al lector.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="C" /> C) Tiene como
+                    principal objetivo entretener.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="D" /> D) Se enfoca en
+                    contar una historia ficticia.</label>
             </div>
-    
+
             <div class="question">
                 <p><strong>4. En un <strong>texto expositivo</strong>, el autor:</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="A" /> A) Presenta hechos, datos y explicaciones de manera clara y objetiva.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="B" /> B) Persuade al lector para que acepte una idea.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="C" /> C) Relata una historia o experiencia personal.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="D" /> D) Hace preguntas y ofrece soluciones al problema planteado.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="A" /> A) Presenta
+                    hechos, datos y explicaciones de manera clara y objetiva.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="B" /> B) Persuade al
+                    lector para que acepte una idea.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="C" /> C) Relata una
+                    historia o experiencia personal.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="D" /> D) Hace preguntas
+                    y ofrece soluciones al problema planteado.</label>
             </div>
-    
+
             <div class="question">
-                <p><strong>5. ¿Cuál de las siguientes afirmaciones corresponde a la <strong>función apelativa</strong> del lenguaje?</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="A" /> A) Se utiliza para influir en la acción del receptor.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="B" /> B) Se busca informar o transmitir conocimiento.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="C" /> C) Se expresa una emoción o sentimiento personal.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="D" /> D) Se habla del mundo de manera objetiva.</label>
+                <p><strong>5. ¿Cuál de las siguientes afirmaciones corresponde a la <strong>función apelativa</strong>
+                        del lenguaje?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="A" /> A) Se utiliza para
+                    influir en la acción del receptor.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="B" /> B) Se busca
+                    informar o transmitir conocimiento.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="C" /> C) Se expresa una
+                    emoción o sentimiento personal.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="D" /> D) Se habla del
+                    mundo de manera objetiva.</label>
             </div>
-    
+
             <div class="question">
                 <p><strong>6. La <strong>cohesión textual</strong> se refiere a:</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="A" /> A) La relación lógica y clara entre las ideas del texto.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="B" /> B) La correcta elección de palabras y frases en el texto.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="C" /> C) La correcta estructuración de párrafos.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="D" /> D) El uso adecuado de comas y puntos en la redacción.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="A" /> A) La relación
+                    lógica y clara entre las ideas del texto.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="B" /> B) La correcta
+                    elección de palabras y frases en el texto.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="C" /> C) La correcta
+                    estructuración de párrafos.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="D" /> D) El uso adecuado
+                    de comas y puntos en la redacción.</label>
             </div>
-    
+
             <div class="question">
                 <p><strong>7. En un texto narrativo, la <strong>estructura</strong> típica incluye:</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="A" /> A) Introducción, desarrollo y conclusión.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="B" /> B) Problema, solución y resultado.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="C" /> C) Introducción, planteamiento y resolución.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="D" /> D) Desarrollo, exposición y conclusión.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="A" /> A) Introducción,
+                    desarrollo y conclusión.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="B" /> B) Problema,
+                    solución y resultado.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="C" /> C) Introducción,
+                    planteamiento y resolución.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="D" /> D) Desarrollo,
+                    exposición y conclusión.</label>
             </div>
-    
+
             <div class="question">
                 <p><strong>8. La <strong>convivencia de las voces</strong> en un texto implica:</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="A" /> A) La incorporación de varios puntos de vista en el discurso.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="B" /> B) La repetición de términos clave para reforzar la idea central.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="C" /> C) El uso de un tono coloquial para establecer cercanía con el receptor.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="D" /> D) El uso de citas y referencias a otras fuentes.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="A" /> A) La
+                    incorporación de varios puntos de vista en el discurso.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="B" /> B) La repetición
+                    de términos clave para reforzar la idea central.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="C" /> C) El uso de un
+                    tono coloquial para establecer cercanía con el receptor.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="D" /> D) El uso de citas
+                    y referencias a otras fuentes.</label>
             </div>
-    
+
             <div class="question">
                 <p><strong>9. Un <strong>argumento deductivo</strong> es aquel que:</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="A" /> A) Parte de una premisa general para llegar a una conclusión específica.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="B" /> B) Utiliza ejemplos particulares para demostrar una idea general.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="C" /> C) Basado en estadísticas y datos concretos, llega a una conclusión amplia.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="D" /> D) Depende de la autoridad de una fuente para convencer al receptor.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="A" /> A) Parte de una
+                    premisa general para llegar a una conclusión específica.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="B" /> B) Utiliza
+                    ejemplos particulares para demostrar una idea general.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="C" /> C) Basado en
+                    estadísticas y datos concretos, llega a una conclusión amplia.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="D" /> D) Depende de la
+                    autoridad de una fuente para convencer al receptor.</label>
             </div>
-    
+
             <div class="question">
-                <p><strong>10. El uso adecuado de <strong>conectores discursivos</strong> en un texto sirve para:</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="A" /> A) Mejorar la fluidez y claridad en la presentación de ideas.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="B" /> B) Crear un impacto emocional en el lector.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="C" /> C) Evitar la repetición de términos y frases.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="D" /> D) Introducir argumentos adicionales a la discusión.</label>
+                <p><strong>10. El uso adecuado de <strong>conectores discursivos</strong> en un texto sirve
+                        para:</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="A" /> A) Mejorar la
+                    fluidez y claridad en la presentación de ideas.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="B" /> B) Crear un
+                    impacto emocional en el lector.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="C" /> C) Evitar la
+                    repetición de términos y frases.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="D" /> D) Introducir
+                    argumentos adicionales a la discusión.</label>
             </div>
-    
+
             <button (click)="submitForm()">Enviar</button>
-    
+
         </div>
     </section>
-    
+
 
     <aside class="sidebar-right">
         <div class="status-icons">

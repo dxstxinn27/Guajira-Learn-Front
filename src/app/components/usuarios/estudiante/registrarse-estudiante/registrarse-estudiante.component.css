@@ -22,3 +22,15 @@ footer {
     grid-area: footer;
     border: 1px solid rgb(255, 255, 255);
 }
+
+/* CSS */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.field-margin {
+    margin-bottom: 1.5rem; /* Espaciado entre campos */
+}

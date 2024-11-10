@@ -1,101 +1,144 @@
 <main class="main-layout" [ngClass]="{ 'dark-mode': isDarkMode }">
     <aside class="sidebar">
         <h2>GUAJIRA LEARN</h2>
-        <button class="menu-button" style="background-color: #e2a23e;">Estudiar</button>
+        <button class="menu-button" style="background-color: #e2a23e;"
+            (click)="navegar('usuarios/estudiante/inicio')">Estudiar</button>
         <button class="menu-button" style="background-color: #e2a23e;">Clasificación</button>
         <button class="menu-button" style="background-color: #e2a23e;">Tienda</button>
-        <button class="menu-button" style="background-color: #e2a23e;">Perfil</button>
+        <button class="menu-button" style="background-color: #e2a23e;"
+            (click)="navegar('usuarios/estudiante/perfil')">Perfil</button>
         <div class="spacer"></div>
         <button class="logout-button" (click)="cerrarSesion()">Cerrar sesión</button>
     </aside>
 
     <section class="content">
         <h2>HUMANIDADES</h2>
-    
+
         <div class="question-form">
-    
+
             <div class="question">
                 <p><strong>1. ¿Cuál es una característica principal del Renacimiento?</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="A" /> A) La exploración espacial.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="B" /> B) La vuelta a los valores y formas de la antigüedad clásica.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="C" /> C) La industrialización.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="D" /> D) La supremacía de las monarquías absolutas.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="A" /> A) La exploración
+                    espacial.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="B" /> B) La vuelta a los
+                    valores y formas de la antigüedad clásica.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="C" /> C) La
+                    industrialización.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="D" /> D) La supremacía
+                    de las monarquías absolutas.</label>
             </div>
-    
+
             <div class="question">
                 <p><strong>2. El término “humanidades” se refiere a:</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="A" /> A) El estudio de la ciencia y la tecnología.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="B" /> B) La investigación de fenómenos sociales desde una perspectiva humanística.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="C" /> C) Las ciencias aplicadas.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="D" /> D) El análisis exclusivo de obras literarias.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="A" /> A) El estudio de
+                    la ciencia y la tecnología.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="B" /> B) La
+                    investigación de fenómenos sociales desde una perspectiva humanística.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="C" /> C) Las ciencias
+                    aplicadas.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="D" /> D) El análisis
+                    exclusivo de obras literarias.</label>
             </div>
-    
+
             <div class="question">
-                <p><strong>3. ¿Qué corriente filosófica propone que “el ser humano es la medida de todas las cosas”?</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="A" /> A) Existencialismo.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="B" /> B) Idealismo.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="C" /> C) Humanismo.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="D" /> D) Realismo.</label>
+                <p><strong>3. ¿Qué corriente filosófica propone que “el ser humano es la medida de todas las
+                        cosas”?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="A" /> A)
+                    Existencialismo.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="B" /> B)
+                    Idealismo.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="C" /> C)
+                    Humanismo.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="D" /> D)
+                    Realismo.</label>
             </div>
-    
+
             <div class="question">
                 <p><strong>4. Durante la Edad Media, ¿quiénes tenían el rol principal en la educación?</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="A" /> A) Los gremios.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="B" /> B) Los señores feudales.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="C" /> C) La Iglesia.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="D" /> D) Los científicos.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="A" /> A) Los
+                    gremios.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="B" /> B) Los señores
+                    feudales.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="C" /> C) La
+                    Iglesia.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="D" /> D) Los
+                    científicos.</label>
             </div>
-    
+
             <div class="question">
                 <p><strong>5. ¿Qué obra literaria es un ejemplo de literatura medieval europea?</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="A" /> A) "Don Quijote".</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="B" /> B) "La Odisea".</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="C" /> C) "La Divina Comedia".</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="D" /> D) "Romeo y Julieta".</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="A" /> A) "Don
+                    Quijote".</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="B" /> B) "La
+                    Odisea".</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="C" /> C) "La Divina
+                    Comedia".</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="D" /> D) "Romeo y
+                    Julieta".</label>
             </div>
-    
+
             <div class="question">
                 <p><strong>6. ¿Cuál de estos conceptos se asocia con la teoría crítica?</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="A" /> A) La neutralidad del conocimiento.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="B" /> B) La emancipación social.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="C" /> C) La fe ciega en el progreso.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="D" /> D) La objetividad científica.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="A" /> A) La neutralidad
+                    del conocimiento.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="B" /> B) La emancipación
+                    social.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="C" /> C) La fe ciega en
+                    el progreso.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="D" /> D) La objetividad
+                    científica.</label>
             </div>
-    
+
             <div class="question">
                 <p><strong>7. El “Siglo de Oro” se refiere principalmente a un período de auge en:</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="A" /> A) La filosofía griega.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="B" /> B) La literatura y el arte españoles.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="C" /> C) Las ciencias naturales.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="D" /> D) La política.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="A" /> A) La filosofía
+                    griega.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="B" /> B) La literatura y
+                    el arte españoles.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="C" /> C) Las ciencias
+                    naturales.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="D" /> D) La
+                    política.</label>
             </div>
-    
+
             <div class="question">
                 <p><strong>8. ¿Qué característica define al barroco?</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="A" /> A) La sobriedad y la simplicidad.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="B" /> B) El uso de la perspectiva.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="C" /> C) La ornamentación excesiva.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="D" /> D) El equilibrio y la armonía.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="A" /> A) La sobriedad y
+                    la simplicidad.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="B" /> B) El uso de la
+                    perspectiva.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="C" /> C) La
+                    ornamentación excesiva.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="D" /> D) El equilibrio y
+                    la armonía.</label>
             </div>
-    
+
             <div class="question">
                 <p><strong>9. El Romanticismo surgió en respuesta a:</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="A" /> A) El Renacimiento.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="B" /> B) La Revolución Industrial y el Neoclasicismo.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="C" /> C) La Edad Media.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="D" /> D) El Realismo.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="A" /> A) El
+                    Renacimiento.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="B" /> B) La Revolución
+                    Industrial y el Neoclasicismo.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="C" /> C) La Edad
+                    Media.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="D" /> D) El
+                    Realismo.</label>
             </div>
-    
+
             <div class="question">
                 <p><strong>10. ¿Qué autor es considerado como precursor de la filosofía existencialista?</strong></p>
-                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="A" /> A) Friedrich Nietzsche.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="B" /> B) Immanuel Kant.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="C" /> C) Karl Marx.</label>
-                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="D" /> D) Jean-Paul Sartre.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="A" /> A) Friedrich
+                    Nietzsche.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="B" /> B) Immanuel
+                    Kant.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="C" /> C) Karl
+                    Marx.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="D" /> D) Jean-Paul
+                    Sartre.</label>
             </div>
-    
+
             <button (click)="submitForm()">Enviar</button>
-    
+
         </div>
     </section>
 

@@ -11,6 +11,7 @@ export interface HorarioDisponibilidadI {
 // Estudiante.ts
 export interface EstudianteI {
     id?: number;
+    estudiante: EstudianteI;
     nombre: string;
     apellido: string;
     tipo_id: 'CÉDULA DE CIUDADANÍA' | 'TARJETA DE IDENTIDAD';
@@ -19,6 +20,7 @@ export interface EstudianteI {
     semestre: number; // Validar entre 1 y 10 en lógica de negocio
     correo: string;
     contraseña: string;
+    cactusCoins: number;
 }
 
 // Docente.ts

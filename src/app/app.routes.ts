@@ -23,12 +23,14 @@ import { AlgebraComponent } from './components/lecciones/algebra/algebra.compone
 import { Algoritmo2Component } from './components/lecciones/algoritmo2/algoritmo2.component';
 import { Competencia2Component } from './components/lecciones/competencia2/competencia2.component';
 import { HumanidadesComponent } from './components/lecciones/humanidades/humanidades.component';
+import { authGuard } from './auth.guard';
+import { PerfilEstudianteComponent } from './components/usuarios/estudiante/perfil-estudiante/perfil-estudiante.component';
 
 export const routes: Routes = [
-    { 
-        path: '', 
-        redirectTo: '/', 
-        pathMatch: 'full' 
+    {
+        path: '',
+        redirectTo: '/',
+        pathMatch: 'full'
     },
 
     { path: 'content', component: ContentComponent },
@@ -38,12 +40,13 @@ export const routes: Routes = [
     // ESTUDIANTE
     { path: "usuarios/estudiante/iniciar-sesion", component: IniciarSesionEstudianteComponent },
     { path: "usuarios/estudiante/registrarse", component: RegistrarseEstudianteComponent },
-    { path: "usuarios/estudiante/inicio", component: InicioEstudianteComponent},
+    { path: 'usuarios/estudiante/inicio', component: InicioEstudianteComponent, canActivate: [authGuard] },
+    { path: "usuarios/estudiante/perfil", component: PerfilEstudianteComponent, canActivate: [authGuard] },
 
     // DOCENTE
     { path: "usuarios/docente/iniciar-sesion", component: IniciarSesionDocenteComponent },
     { path: "usuarios/docente/registrarse", component: RegistrarseDocenteComponent },
-    { path: "usuarios/docente/inicio", component: InicioDocenteComponent},
+    { path: "usuarios/docente/inicio", component: InicioDocenteComponent },
 
     // ASIGNATURA
     { path: "cursos/asignatura/crear", component: CrearAsignaturaComponent },
@@ -52,21 +55,21 @@ export const routes: Routes = [
     { path: "cursos/tema/crear", component: CrearTemaComponent },
 
     // SEMESTRES
-    {path: "semestres/semestre1", component: Semestre1Component},
-    {path: "semestres/semestre2", component: Semestre2Component},
+    { path: "semestres/semestre1", component: Semestre1Component, canActivate: [authGuard] },
+    { path: "semestres/semestre2", component: Semestre2Component, canActivate: [authGuard] },
 
     // LECCIONES
-    {path: "lecciones/calculo1", component: Calculo1Component},
-    {path: "lecciones/logica", component: LogicaComponent},
-    {path: "lecciones/introduccion", component: IntroduccionComponent},
-    {path: "lecciones/algoritmo1", component: Algoritmo1Component},
-    {path: "lecciones/competencia1", component: Competencia1Component},
-    {path: "lecciones/catedra", component: CatedraComponent},
-    {path: "lecciones/calculo2", component: Calculo2Component},
-    {path: "lecciones/fisica1", component: Fisica1Component},
-    {path: "lecciones/algebra", component: AlgebraComponent},
-    {path: "lecciones/algoritmo2", component: Algoritmo2Component},
-    {path: "lecciones/competencia2", component: Competencia2Component},
-    {path: "lecciones/humanidades", component: HumanidadesComponent},
+    { path: "lecciones/calculo1", component: Calculo1Component, canActivate: [authGuard] },
+    { path: "lecciones/logica", component: LogicaComponent, canActivate: [authGuard] },
+    { path: "lecciones/introduccion", component: IntroduccionComponent, canActivate: [authGuard] },
+    { path: "lecciones/algoritmo1", component: Algoritmo1Component, canActivate: [authGuard] },
+    { path: "lecciones/competencia1", component: Competencia1Component, canActivate: [authGuard] },
+    { path: "lecciones/catedra", component: CatedraComponent, canActivate: [authGuard] },
+    { path: "lecciones/calculo2", component: Calculo2Component, canActivate: [authGuard] },
+    { path: "lecciones/fisica1", component: Fisica1Component, canActivate: [authGuard] },
+    { path: "lecciones/algebra", component: AlgebraComponent, canActivate: [authGuard] },
+    { path: "lecciones/algoritmo2", component: Algoritmo2Component, canActivate: [authGuard] },
+    { path: "lecciones/competencia2", component: Competencia2Component, canActivate: [authGuard] },
+    { path: "lecciones/humanidades", component: HumanidadesComponent, canActivate: [authGuard] },
 
 ];

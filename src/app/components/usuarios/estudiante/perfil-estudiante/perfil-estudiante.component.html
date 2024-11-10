@@ -1,0 +1,70 @@
+<main class="main-layout" [ngClass]="{ 'dark-mode': isDarkMode }">
+    <aside class="sidebar">
+      <h2>GUAJIRA LEARN</h2>
+      <button class="menu-button" style="background-color: #e2a23e;" (click)="navegar('usuarios/estudiante/inicio')">Estudiar</button>
+      <button class="menu-button" style="background-color: #e2a23e;">Clasificación</button>
+      <button class="menu-button" style="background-color: #e2a23e;">Tienda</button>
+      <button class="menu-button" style="background-color: #e2a23e;">Perfil</button>
+      <div class="spacer"></div>
+      <button class="logout-button" (click)="cerrarSesion()">Cerrar sesión</button>
+    </aside>
+  
+    <section class="content">
+      <h2 class="profile-title">PERFIL DEL ESTUDIANTE</h2>
+    
+      <div *ngIf="estudiante">
+        <div class="profile-header">
+          <div class="profile-picture">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Placeholder_no_text.svg/150px-Placeholder_no_text.svg.png?20180902010812" alt="Foto de perfil">
+          </div>
+          <h2>{{ estudiante.nombre }} {{ estudiante.apellido }}</h2>
+          
+        </div>
+    
+        <div class="profile-info-grid">
+          <div class="info-block">
+            <p class="label">ID:</p>
+            <p class="data">{{ estudiante.numero_id }}</p>
+          </div>
+          <div class="info-block">
+            <p class="label">Carrera:</p>
+            <p class="data">{{ estudiante.carrera }}</p>
+          </div>
+          <div class="info-block">
+            <p class="label">Semestre:</p>
+            <p class="data">{{ estudiante.semestre }}</p>
+          </div>
+          <div class="info-block">
+            <p class="label">Correo:</p>
+            <p class="data">{{ estudiante.correo }}</p>
+          </div>
+        </div>
+
+      </div>
+    
+      <div *ngIf="!estudiante">
+        <p>Cargando datos del perfil...</p>
+      </div>
+    </section>
+    
+  
+    <aside class="sidebar-right">
+      <div class="status-icons">
+        <p>🔥 {{ racha }} 🌵 {{ cactusCoins }}</p>
+        <div class="theme-toggle">
+          <button (click)="toggleDarkMode()" class="switch" [ngClass]="{ 'active': isDarkMode }">
+            <span class="slider"></span>
+          </button>
+          <label>🌙 Tema oscuro</label>
+        </div>
+      </div>
+      <div class="calendar-container">
+        <h3 class="calendar-title">Calendario</h3>
+        <p class="calendar-date">{{ fechaActual | date:'MMMM yyyy' }}</p>
+        <div class="calendar-grid">
+          <span *ngFor="let day of diasMes">{{ day }}</span>
+        </div>
+      </div>
+    </aside>
+  </main>
+  

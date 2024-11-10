@@ -22,24 +22,25 @@ export class IniciarSesionEstudianteComponent {
   correo: string = '';
   password: string = '';
 
-  constructor(private estudianteService: EstudianteService, private router: Router) {}
+  constructor(private estudianteService: EstudianteService, private router: Router) { }
 
   login() {
     this.estudianteService.login(this.correo, this.password).subscribe(
       response => {
-        // Si la respuesta es exitosa, deberías tener el mensaje "Autenticado correctamente"
-        console.log('Respuesta del servidor:', response);
+        // Muestra el objeto completo de la respuesta para verificar su estructura
+        console.log('Respuesta completa del servidor:', response);
 
-        if (response.message === "Autenticado correctamente") {
+        if (response.message && response.message.trim() === "Autenticado correctamente") {
           // Si la autenticación fue exitosa, redirige al estudiante a la página de inicio
+          localStorage.setItem('token', response.token); // Guarda el token en localStorage
           this.router.navigate(['/usuarios/estudiante/inicio']);
         } else {
-          // Si la respuesta no es la esperada, muestra un mensaje
+          // Si la respuesta no es la esperada, muestra un mensaje de error
           alert("Error en la autenticación.");
         }
       },
       error => {
-        // Si hubo un error en la autenticación (código 401, 404, etc.), muestra el error
+        // Manejo de errores HTTP, como un error 401 o 404
         console.error("Error de autenticación:", error);
         alert("Correo o contraseña incorrectos");
       }

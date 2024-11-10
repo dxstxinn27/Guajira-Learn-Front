@@ -1,10 +1,10 @@
 <main class="main-layout" [ngClass]="{ 'dark-mode': isDarkMode }">
     <aside class="sidebar">
         <h2>GUAJIRA LEARN</h2>
-        <button class="menu-button" style="background-color: #e2a23e;">Estudiar</button>
-        <button class="menu-button" style="background-color: #e2a23e;">Clasificación</button>
-        <button class="menu-button" style="background-color: #e2a23e;">Tienda</button>
-        <button class="menu-button" style="background-color: #e2a23e;">Perfil</button>
+        <button class="menu-button" style="background-color: #e2a23e;" (click)="navegar('usuarios/estudiante/inicio')">Estudiar</button>
+      <button class="menu-button" style="background-color: #e2a23e;">Clasificación</button>
+      <button class="menu-button" style="background-color: #e2a23e;">Tienda</button>
+      <button class="menu-button" style="background-color: #e2a23e;" (click)="navegar('usuarios/estudiante/perfil')">Perfil</button>
         <div class="spacer"></div>
         <button class="logout-button" (click)="cerrarSesion()">Cerrar sesión</button>
     </aside>
