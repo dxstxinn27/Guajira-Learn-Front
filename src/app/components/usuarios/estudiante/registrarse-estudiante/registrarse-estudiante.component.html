@@ -8,7 +8,7 @@
             <ng-template pTemplate="header"></ng-template>
             <div>
                 <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()" class="p-3 bg-faded">
-    
+
                     <div class="grid">
                         <div class="col-12 sm:col-6">
                             <p-floatLabel>
@@ -17,7 +17,7 @@
                             </p-floatLabel>
                         </div>
                         <br><br><br><br>
-    
+
                         <div class="col-12 sm:col-6">
                             <p-floatLabel>
                                 <input pInputText id="apellido" formControlName="apellido" />
@@ -25,7 +25,7 @@
                             </p-floatLabel>
                         </div>
                         <br><br><br><br>
-    
+
                         <div class="col-12 sm:col-6">
                             <p-floatLabel>
                                 <p-dropdown [options]="tipoIdOptions" formControlName="tipo_id"></p-dropdown>
@@ -33,7 +33,7 @@
                             </p-floatLabel>
                         </div>
                         <br><br><br><br>
-    
+
                         <div class="col-12 sm:col-6">
                             <p-floatLabel>
                                 <input pInputText id="numero_id" type="number" formControlName="numero_id" />
@@ -42,7 +42,7 @@
                         </div>
                         <br><br><br><br>
                     </div>
-    
+
                     <div class="grid">
                         <div class="col-12 sm:col-6">
                             <p-floatLabel>
@@ -51,7 +51,7 @@
                             </p-floatLabel>
                         </div>
                         <br><br><br><br>
-    
+
                         <div class="col-12 sm:col-6">
                             <p-floatLabel>
                                 <input pInputText id="semestre" type="number" formControlName="semestre" />
@@ -62,7 +62,7 @@
                             </small>
                         </div>
                         <br><br><br><br>
-    
+
                         <div class="col-12 sm:col-6">
                             <p-floatLabel>
                                 <input pInputText id="correo" type="email" formControlName="correo" />
@@ -73,7 +73,7 @@
                             </small>
                         </div>
                         <br><br><br><br>
-    
+
                         <div class="col-12 sm:col-6">
                             <p-password formControlName="contraseña" placeholder="Contraseña" [toggleMask]="true">
                                 <ng-template pTemplate="header">
@@ -93,10 +93,12 @@
                         </div>
                         <br><br><br><br>
                     </div>
-    
+
                     <div class="flex justify-content-center flex-wrap">
-                        <button pButton pRipple label="Guardar" icon="pi pi-save" severity="info" class="mr-4" type="submit"></button>
-                        <button pButton pRipple label="Cancelar" icon="pi pi-times-circle" severity="warning" class="mr-4" type="button" (click)="cancel()"></button>
+                        <button pButton pRipple label="Guardar" icon="pi pi-save" severity="info" class="mr-4"
+                            type="submit"></button>
+                        <button pButton pRipple label="Cancelar" icon="pi pi-times-circle" severity="warning"
+                            class="mr-4" type="button" (click)="cancel()"></button>
                     </div>
                 </form>
             </div>
@@ -104,8 +106,8 @@
             <ng-template pTemplate="footer"></ng-template>
         </p-card>
     </section>
-    
-    
+
+
 
     <footer>
         <app-footer></app-footer>

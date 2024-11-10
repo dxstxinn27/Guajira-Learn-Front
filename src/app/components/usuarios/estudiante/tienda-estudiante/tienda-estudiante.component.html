@@ -1,0 +1,70 @@
+<main class="main-layout" [ngClass]="{ 'dark-mode': isDarkMode }">
+    <aside class="sidebar">
+        <h2>GUAJIRA LEARN</h2>
+        <button class="menu-button" style="background-color: #e2a23e;"
+            (click)="navegar('usuarios/estudiante/inicio')">Estudiar</button>
+        <button class="menu-button" style="background-color: #e2a23e;"
+            (click)="navegar('usuarios/estudiante/clasificacion')">Clasificación</button>
+        <button class="menu-button" style="background-color: #e2a23e;"
+            (click)="navegar('usuarios/estudiante/tienda')">Tienda</button>
+        <button class="menu-button" style="background-color: #e2a23e;"
+            (click)="navegar('usuarios/estudiante/perfil')">Perfil</button>
+        <div class="spacer"></div>
+        <button class="logout-button" (click)="cerrarSesion()">Cerrar sesión</button>
+    </aside>
+
+    <section class="tienda-container">
+        <h2 class="tienda-title">TIENDA ESTUDIANTE</h2>
+        <p class="tienda-description">Compra objetos para mejorar tu experiencia. ¡Haz que tu racha sea aún más épica!
+        </p>
+        <br><br>
+
+        <div class="productos">
+            <!-- Protector de Racha -->
+            <div class="producto-card">
+                <div class="producto-imagen">
+                    <img src="https://cdn-icons-png.flaticon.com/256/3087/3087591.png" alt="Protector de Racha">
+                </div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Protector de Racha</h3>
+                    <p class="producto-descripcion">Usa este protector para evitar perder tu racha. ¡No más fallos!</p>
+                    <p class="producto-precio">Precio: <span class="precio">100 cactusCoins</span></p>
+                    <button class="comprar-btn">Comprar</button>
+                </div>
+            </div>
+
+            <!-- Doble o Nada -->
+            <div class="producto-card">
+                <div class="producto-imagen">
+                    <img src="https://cdn-icons-png.flaticon.com/256/10494/10494150.png" alt="Doble o Nada">
+                </div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Doble o Nada</h3>
+                    <p class="producto-descripcion">¿Te atreves a arriesgarlo todo? ¡Gana el doble o pierde todo!</p>
+                    <p class="producto-precio">Precio: <span class="precio">150 cactusCoins</span></p>
+                    <button class="comprar-btn">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <aside class="sidebar-right">
+        <div class="status-icons">
+            <p>🔥 {{ racha }} 🌵 {{ cactusCoins }}</p>
+            <div class="theme-toggle">
+                <button (click)="toggleDarkMode()" class="switch" [ngClass]="{ 'active': isDarkMode }">
+                    <span class="slider"></span>
+                </button>
+                <label>🌙 Tema oscuro</label>
+            </div>
+        </div>
+        <div class="calendar-container">
+            <h3 class="calendar-title">Calendario</h3>
+            <p class="calendar-date">{{ fechaActual | date:'MMMM yyyy' }}</p>
+            <div class="calendar-grid">
+                <span *ngFor="let day of diasMes">{{ day }}</span>
+            </div>
+        </div>
+    </aside>
+</main>

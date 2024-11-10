@@ -25,6 +25,7 @@ import { Competencia2Component } from './components/lecciones/competencia2/compe
 import { HumanidadesComponent } from './components/lecciones/humanidades/humanidades.component';
 import { authGuard } from './auth.guard';
 import { PerfilEstudianteComponent } from './components/usuarios/estudiante/perfil-estudiante/perfil-estudiante.component';
+import { TiendaEstudianteComponent } from './components/usuarios/estudiante/tienda-estudiante/tienda-estudiante.component';
 
 export const routes: Routes = [
     {
@@ -42,6 +43,7 @@ export const routes: Routes = [
     { path: "usuarios/estudiante/registrarse", component: RegistrarseEstudianteComponent },
     { path: 'usuarios/estudiante/inicio', component: InicioEstudianteComponent, canActivate: [authGuard] },
     { path: "usuarios/estudiante/perfil", component: PerfilEstudianteComponent, canActivate: [authGuard] },
+    { path: "usuarios/estudiante/tienda", component: TiendaEstudianteComponent, canActivate: [authGuard] },
 
     // DOCENTE
     { path: "usuarios/docente/iniciar-sesion", component: IniciarSesionDocenteComponent },
