@@ -11,12 +11,12 @@ import { Router } from '@angular/router';
 })
 export class Semestre1Component implements OnInit {
   lessons = [
-    { nombre: 'Cálculo Diferencial', estado: 'Iniciar', ruta: '' },
-    { nombre: 'Lógica y Teoría', estado: 'Iniciar', ruta: '' },
-    { nombre: 'Introducción a la Ing. de Sistemas', estado: 'Iniciar', ruta: '' },
-    { nombre: 'Algoritmo y Programación I', estado: 'Iniciar', ruta: '' },
-    { nombre: 'Competencia Comunicativa I', estado: 'Iniciar', ruta: '' },
-    { nombre: 'Cátedra Uniguajira', estado: 'Iniciar', ruta: '' },
+    { nombre: 'Cálculo Diferencial', estado: 'Iniciar', ruta: 'lecciones/calculo1' },
+    { nombre: 'Lógica y Teoría', estado: 'Iniciar', ruta: 'lecciones/logica' },
+    { nombre: 'Introducción a la Ing. de Sistemas', estado: 'Iniciar', ruta: 'lecciones/introduccion' },
+    { nombre: 'Algoritmo y Programación I', estado: 'Iniciar', ruta: 'lecciones/algoritmo1' },
+    { nombre: 'Competencia Comunicativa I', estado: 'Iniciar', ruta: 'lecciones/competencia1' },
+    { nombre: 'Cátedra Uniguajira', estado: 'Iniciar', ruta: 'lecciones/catedra' },
   ];
 
   constructor(private router: Router) {}

@@ -1,1 +1,201 @@
-<p>algoritmo2 works!</p>
+<main class="main-layout" [ngClass]="{ 'dark-mode': isDarkMode }">
+    <aside class="sidebar">
+        <h2>GUAJIRA LEARN</h2>
+        <button class="menu-button" style="background-color: #e2a23e;">Estudiar</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Clasificación</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Tienda</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Perfil</button>
+        <div class="spacer"></div>
+        <button class="logout-button" (click)="cerrarSesion()">Cerrar sesión</button>
+    </aside>
+
+    <section class="content">
+        <h2>ALGORITMO Y PROGRAMACIÓN II</h2>
+
+        <div class="question-form">
+            
+            <div class="question">
+                <p><strong>1. ¿Cuál de las siguientes estructuras es adecuada para realizar una búsqueda binaria?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="A" /> A) Pila.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="B" /> B) Lista enlazada.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="C" /> C) Array ordenado.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="D" /> D) Árbol binario de busqueda desbalanceado.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>2. ¿Qué es la complejidad temporal de un algoritmo?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="A" /> A) El espacio de memoria que usa el algoritmo..
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="B" /> B) La cantidad de tiempo que tarda un algoritmo en ejecutarse en función del tamaño de la entrada..
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="C" /> C) La cantidad de pasos necesarios para ejecutar el código..
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="D" /> D) La eficiencia de almacenamiento de un algoritmo..
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>3. ¿Cuál es la característica principal de un árbol binario de búsqueda?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="A" /> A) Todos los nodos tienen exactamente dos hijos.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="B" /> B) Todos los valores en el subárbol izquierdo de un nodo son menores que el nodo, y todos los valores en el subárbol derecho son mayores.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="C" /> C) Los nodos están ordenados de manera descendente.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="D" /> D) Solo contiene valores pares.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>4. ¿Qué estructura de datos es ideal para implementar una cola de prioridad?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="A" /> A) Array.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="B" /> B) Lista enlazada.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="C" /> C) Pila.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="D" /> D) Montículo (Heap).
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>5. ¿Qué técnica de programación se basa en resolver un problema dividiéndolo en problemas más pequeños del mismo tipo?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="A" /> A) Programación iterativa.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="B" /> B) Programación recursiva.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="C" /> C) Programación dinámica.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="D" /> D) Programación funcional.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>6. ¿Cuál es el propósito de la función hash en una tabla hash?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="A" /> A) Convertir datos en un formato cifrado.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="B" /> B) Guardar todos los valores en el mismo índice.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="C" /> C) Mapear claves a posiciones específicas en una tabla para acceso rápido.                    
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="D" /> D) Reducir el espacio ocupado por los datos en memoria.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>7. En la notación Big O, ¿cuál de las siguientes complejidades representa el mejor rendimiento para un algoritmo?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="A" /> A) O(n^2)
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="B" /> B) O(log n)
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="C" /> C) O(n)                   
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="D" /> D) O(n log n)
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>8. ¿Cuál es el principal beneficio del enfoque de programación dinámica?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="A" /> A) Reduce el número de bucles necesarios.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="B" /> B) Resuelve problemas dividiendo los problemas en subproblemas idénticos y almacenando sus soluciones.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="C" /> C) Aumenta la velocidad de cálculo de un programa.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="D" /> D) Minimiza el uso de memoria.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>9. ¿Cuál es el propósito de un algoritmo de ordenamiento rápido (quicksort)?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="A" /> A) Ordenar un conjunto de datos en orden ascendente o descendente.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="B" /> B) Dividir los datos en dos partes iguales.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="C" /> C) Calcular el promedio de un conjunto de datos.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="D" /> D) Fusionar dos listas de datos.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>10. ¿Qué propiedad tiene un grafo dirigido acíclico (DAG)?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="A" /> A) Contiene ciclos.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="B" /> B) Tiene al menos una ruta entre todos los nodos.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="C" /> C) No tiene ciclos.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="D" /> D) Todos los nodos tienen el mismo número de aristas.
+                  </label>
+            </div>
+
+            <button (click)="submitForm()">Enviar</button>
+
+        </div>
+
+    </section>
+
+    <aside class="sidebar-right">
+        <div class="status-icons">
+            <p>🔥 {{ racha }} 🌵 {{ cactusCoins }}</p>
+            <div class="theme-toggle">
+                <button (click)="toggleDarkMode()" class="switch" [ngClass]="{ 'active': isDarkMode }">
+                    <span class="slider"></span>
+                </button>
+                <label>🌙 Tema oscuro</label>
+            </div>
+        </div>
+        <div class="calendar-container">
+            <h3 class="calendar-title">Calendario</h3>
+            <p class="calendar-date">{{ fechaActual | date:'MMMM yyyy' }}</p>
+            <div class="calendar-grid">
+                <span *ngFor="let day of diasMes">{{ day }}</span>
+            </div>
+        </div>
+    </aside>
+</main>

@@ -1,1 +1,201 @@
-<p>calculo2 works!</p>
+<main class="main-layout" [ngClass]="{ 'dark-mode': isDarkMode }">
+    <aside class="sidebar">
+        <h2>GUAJIRA LEARN</h2>
+        <button class="menu-button" style="background-color: #e2a23e;">Estudiar</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Clasificación</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Tienda</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Perfil</button>
+        <div class="spacer"></div>
+        <button class="logout-button" (click)="cerrarSesion()">Cerrar sesión</button>
+    </aside>
+
+    <section class="content">
+        <h2>CALCULO INTEGRAL</h2>
+
+        <div class="question-form">
+            
+            <div class="question">
+                <p><strong>1. ¿Qué es una integral definida?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="A" /> A) Es un límite que calcula la tasa de cambio instantánea de una función.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="B" /> B) Es un proceso que calcula el área bajo la curva de una función en un intervalo específico.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="C" /> C) Es una técnica que multiplica una función por otra función.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="D" /> D) Es un valor fijo asociado con cualquier función.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>2. ¿Cuál de las siguientes afirmaciones describe mejor el "teorema fundamental del cálculo"?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="A" /> A) Permite que derivadas e integrales sean calculadas de manera independiente.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="B" /> B) Establece la relación entre la derivación y la integración.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="C" /> C) Es útil solo para funciones lineales.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="D" /> D) Relaciona sumas y productos en integrales.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>3. ¿Para qué se utiliza comúnmente una integral en aplicaciones prácticas?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="A" /> A) Para determinar la rapidez con la que cambia un objeto.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="B" /> B) Para calcular el volumen de un objeto o el área bajo una curva.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="C" /> C) Para determinar el punto máximo o mínimo de una función.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="D" /> D) Para simplificar expresiones algebraicas.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>4. ¿Qué representa el valor de una integral definida en un contexto geométrico?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="A" /> A) La pendiente de una recta tangente a una curva.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="B" /> B) El área bajo la curva de una función en un intervalo dado.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="C" /> C) El punto de inflexión de una función.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="D" /> D) El valor promedio de la función en un intervalo.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>5. ¿Qué técnica se usa comúnmente para resolver una integral compleja que puede ser separada en varios términos?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="A" /> A) Derivación por partes.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="B" /> B) Integración por partes.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="C" /> C) Suma de fracciones parciales.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="D" /> D) Expansión de Taylor.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>6. ¿Cuál es la diferencia principal entre una integral definida y una indefinida?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="A" /> A) La integral indefinida tiene límites de integración y la definida no.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="B" /> B) La integral definida proporciona un valor numérico, mientras que la indefinida representa una familia de funciones.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="C" /> C) La integral definida siempre es positiva.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="D" /> D) La integral indefinida es usada solo en geometría.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>7. ¿Qué representa el "área negativa" en una integral definida de una función por debajo del eje x?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="A" /> A) Significa que la función es incorrecta.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="B" /> B) Indica que hay valores negativos en el intervalo de la función.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="C" /> C) Muestra que el área bajo el eje x se considera negativa.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="D" /> D) No tiene ningún significado especial.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>8. ¿Cuál de las siguientes opciones describe una aplicación de la integral en física?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="A" /> A) Calcular la fuerza máxima de un objeto en reposo.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="B" /> B) Calcular el trabajo realizado al mover un objeto a lo largo de una distancia.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="C" /> C) Determinar la velocidad promedio en un viaje. 
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="D" /> D) Encontrar el punto exacto donde un objeto cambia de dirección.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>9. En el cálculo de áreas entre curvas, ¿qué representa la integral de la diferencia entre dos funciones?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="A" /> A) La velocidad de cambio entre ambas funciones.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="B" /> B) La distancia entre ambas funciones en todo el intervalo.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="C" /> C) El área de la región encerrada entre ambas funciones.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="D" /> D) La media de las áreas generadas por ambas funciones.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>10. ¿Cuál es el propósito de una integral impropia?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="A" /> A) Calcular integrales sobre intervalos finitos.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="B" /> B) Evaluar el área bajo funciones que no están acotadas o en intervalos infinitos.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="C" /> C) Resolver ecuaciones diferenciales.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="D" /> D) Sumar secuencias de números enteros.
+                  </label>
+            </div>
+
+            <button (click)="submitForm()">Enviar</button>
+
+        </div>
+
+    </section>
+
+    <aside class="sidebar-right">
+        <div class="status-icons">
+            <p>🔥 {{ racha }} 🌵 {{ cactusCoins }}</p>
+            <div class="theme-toggle">
+                <button (click)="toggleDarkMode()" class="switch" [ngClass]="{ 'active': isDarkMode }">
+                    <span class="slider"></span>
+                </button>
+                <label>🌙 Tema oscuro</label>
+            </div>
+        </div>
+        <div class="calendar-container">
+            <h3 class="calendar-title">Calendario</h3>
+            <p class="calendar-date">{{ fechaActual | date:'MMMM yyyy' }}</p>
+            <div class="calendar-grid">
+                <span *ngFor="let day of diasMes">{{ day }}</span>
+            </div>
+        </div>
+    </aside>
+</main>

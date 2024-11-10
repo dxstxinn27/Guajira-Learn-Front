@@ -1,1 +1,118 @@
-<p>introduccion works!</p>
+<main class="main-layout" [ngClass]="{ 'dark-mode': isDarkMode }">
+    <aside class="sidebar">
+        <h2>GUAJIRA LEARN</h2>
+        <button class="menu-button" style="background-color: #e2a23e;">Estudiar</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Clasificación</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Tienda</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Perfil</button>
+        <div class="spacer"></div>
+        <button class="logout-button" (click)="cerrarSesion()">Cerrar sesión</button>
+    </aside>
+
+    <section class="content">
+        <h2>INTRODUCCIÓN A LA INGENIERÍA DE SISTEMAS</h2>
+    
+        <div class="question-form">
+    
+            <div class="question">
+                <p><strong>1. ¿Cuál de las siguientes opciones mejor describe la ingeniería de sistemas?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="A" /> A) El estudio de los sistemas informáticos a nivel de hardware únicamente.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="B" /> B) El diseño, análisis e implementación de soluciones tecnológicas integrales que involucran hardware, software y personas.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="C" /> C) La creación de sistemas operativos y redes de computadoras.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="D" /> D) El análisis de datos a gran escala para toma de decisiones.</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>2. ¿Cuál es el objetivo principal del ciclo de vida de un sistema?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="A" /> A) Maximizar el uso de recursos.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="B" /> B) Asegurar que el sistema sea eficiente y funcional durante todo su ciclo de operación.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="C" /> C) Minimizar los costos de desarrollo sin considerar la calidad.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="D" /> D) Generar la mayor cantidad de productos posibles con la menor inversión.</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>3. ¿Qué representa un modelo en el contexto de la ingeniería de sistemas?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="A" /> A) Una representación abstracta de un sistema para analizar sus componentes y comportamientos.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="B" /> B) Un software que automatiza todas las funciones de un sistema.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="C" /> C) Un conjunto de instrucciones para desarrollar un sistema.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="D" /> D) Un análisis de mercado para determinar la viabilidad de un sistema.</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>4. ¿Qué metodología de desarrollo de software se utiliza en ingeniería de sistemas para asegurar la entrega continua de valor?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="A" /> A) Enfoque de cascada.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="B" /> B) Modelo de V.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="C" /> C) Prototipado.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="D" /> D) Desarrollo ágil.</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>5. En ingeniería de sistemas, ¿qué es un <strong>sistema abierto</strong>?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="A" /> A) Un sistema que interactúa con su entorno.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="B" /> B) Un sistema completamente aislado de su entorno.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="C" /> C) Un sistema que solo está compuesto por software.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="D" /> D) Un sistema que no se puede modificar.</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>6. ¿Qué es un <strong>requisito funcional</strong> en el desarrollo de un sistema?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="A" /> A) Una característica de rendimiento del sistema.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="B" /> B) Un comportamiento que el sistema debe realizar.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="C" /> C) Un componente de hardware necesario para que funcione el sistema.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="D" /> D) Un aspecto estético del diseño del sistema.</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>7. ¿Qué herramienta se utiliza comúnmente para modelar los flujos de trabajo en la ingeniería de sistemas?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="A" /> A) Diagramas de flujo.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="B" /> B) Diagramas de clases.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="C" /> C) Diagramas de entidad-relación.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="D" /> D) Diagramas de estado.</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>8. ¿Qué es un <strong>análisis de viabilidad</strong> en ingeniería de sistemas?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="A" /> A) El proceso de verificar el rendimiento de un sistema una vez implementado.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="B" /> B) El proceso de determinar si un sistema es técnicamente, económicamente y operativamente viable.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="C" /> C) El proceso de análisis de los datos recolectados durante el ciclo de vida de un sistema.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="D" /> D) El proceso de eliminar errores del sistema una vez que ha sido desarrollado.</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>9. ¿Qué fase del ciclo de vida del sistema se encarga de la implementación de las soluciones diseñadas?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="A" /> A) Análisis.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="B" /> B) Diseño.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="C" /> C) Evaluación.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="D" /> D) Implementación.</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>10. En la ingeniería de sistemas, ¿qué significa la integración de componentes?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="A" /> A) La mejora de la eficiencia de un solo componente del sistema.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="B" /> B) La combinación de varios componentes para formar un sistema coherente y funcional.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="C" /> C) La selección de componentes para cada función del sistema.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="D" /> D) La exclusión de componentes no funcionales del sistema.</label>
+            </div>
+    
+        </div>
+    </section>
+    
+    <aside class="sidebar-right">
+        <div class="status-icons">
+            <p>🔥 {{ racha }} 🌵 {{ cactusCoins }}</p>
+            <div class="theme-toggle">
+                <button (click)="toggleDarkMode()" class="switch" [ngClass]="{ 'active': isDarkMode }">
+                    <span class="slider"></span>
+                </button>
+                <label>🌙 Tema oscuro</label>
+            </div>
+        </div>
+        <div class="calendar-container">
+            <h3 class="calendar-title">Calendario</h3>
+            <p class="calendar-date">{{ fechaActual | date:'MMMM yyyy' }}</p>
+            <div class="calendar-grid">
+                <span *ngFor="let day of diasMes">{{ day }}</span>
+            </div>
+        </div>
+    </aside>
+</main>

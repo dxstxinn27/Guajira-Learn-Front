@@ -1,1 +1,201 @@
-<p>algebra works!</p>
+<main class="main-layout" [ngClass]="{ 'dark-mode': isDarkMode }">
+    <aside class="sidebar">
+        <h2>GUAJIRA LEARN</h2>
+        <button class="menu-button" style="background-color: #e2a23e;">Estudiar</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Clasificación</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Tienda</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Perfil</button>
+        <div class="spacer"></div>
+        <button class="logout-button" (click)="cerrarSesion()">Cerrar sesión</button>
+    </aside>
+
+    <section class="content">
+        <h2>ALGEBRA LINEAL</h2>
+
+        <div class="question-form">
+            
+            <div class="question">
+                <p><strong>1. ¿Cuál de las siguientes afirmaciones es cierta sobre un sistema de ecuaciones lineales?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="A" /> A) Siempre tiene una única solución.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="B" /> B) Puede tener una única solución, infinitas soluciones o ninguna solución.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="C" /> C) Siempre tiene infinitas soluciones.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="D" /> D) Nunca tiene solución.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>2. ¿Qué es un vector?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="A" /> A) Un número real.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="B" /> B) Una cantidad que solo tiene magnitud.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="C" /> C) Una cantidad que tiene magnitud y dirección.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="D" /> D) Una ecuación algebraica.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>3. Si dos vectores son perpendiculares, su producto punto es:</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="A" /> A) 1
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="B" /> B) 0
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="C" /> C) -1
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="D" /> D) Infinito
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>4. ¿Qué representa el determinante de una matriz cuadrada?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="A" /> A) El número de filas de la matriz.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="B" /> B) El número de columnas de la matriz.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="C" /> C) Si la matriz es invertible o no.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="D" /> D) La suma de los elementos de la matriz.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>5. ¿Cuál es la dimensión de un espacio vectorial generado por tres vectores linealmente independientes en R4?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="A" /> A) 1
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="B" /> B) 2
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="C" /> C) 3
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="D" /> D) 4
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>6. ¿Cuál de los siguientes no es un espacio vectorial?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="A" /> A) El conjunto de todos los polinomios.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="B" /> B) El conjunto de todas las matrices 2x2.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="C" /> C) El conjunto de todos los vectores en R3.                    
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="D" /> D) El conjunto de números reales positivos.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>7. ¿Cuál de las siguientes afirmaciones es cierta sobre vectores linealmente dependientes?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="A" /> A) No se pueden expresar unos en función de otros.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="B" /> B) Uno o más de los vectores puede expresarse como combinación lineal de los demás.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="C" /> C) Son perpendiculares entre sí.                    
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="D" /> D) Son ortogonales entre sí.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>8. Si A es una matriz 3x3 invertible, entonces el rango de A es:</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="A" /> A) 0
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="B" /> B) 1
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="C" /> C) 2
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="D" /> D) 3
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>9. ¿Qué propiedad cumple una transformación lineal T si es inyectiva?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="A" /> A) Tiene más de una solución.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="B" /> B) Mapea diferentes vectores de origen a diferentes vectores en el rango.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="C" /> C) No tiene inversa.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="D" /> D) Siempre tiene rango 0.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>10. ¿Cuál de los siguientes es el criterio para que dos matrices sean multiplicables?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="A" /> A) Tienen el mismo número de filas.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="B" /> B) El número de columnas de la primera matriz es igual al número de filas de la segunda.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="C" /> C) Ambas matrices son cuadradas.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="D" /> D) Las matrices tienen el mismo determinante.
+                  </label>
+            </div>
+
+            <button (click)="submitForm()">Enviar</button>
+
+        </div>
+
+    </section>
+
+    <aside class="sidebar-right">
+        <div class="status-icons">
+            <p>🔥 {{ racha }} 🌵 {{ cactusCoins }}</p>
+            <div class="theme-toggle">
+                <button (click)="toggleDarkMode()" class="switch" [ngClass]="{ 'active': isDarkMode }">
+                    <span class="slider"></span>
+                </button>
+                <label>🌙 Tema oscuro</label>
+            </div>
+        </div>
+        <div class="calendar-container">
+            <h3 class="calendar-title">Calendario</h3>
+            <p class="calendar-date">{{ fechaActual | date:'MMMM yyyy' }}</p>
+            <div class="calendar-grid">
+                <span *ngFor="let day of diasMes">{{ day }}</span>
+            </div>
+        </div>
+    </aside>
+</main>

@@ -11,7 +11,95 @@
 
     <section class="content">
         <h2>COMPETENCIA COMUNICATIVA I</h2>
-    </section>
+    
+        <div class="question-form">
+    
+            <div class="question">
+                <p><strong>1. ¿Qué es la competencia comunicativa?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="A" /> A) La capacidad de realizar preguntas y respuestas en un contexto social.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="B" /> B) La habilidad de expresar y comprender mensajes adecuados al contexto y a la situación.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="C" /> C) La capacidad de redactar textos formales.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="D" /> D) La habilidad de memorizar vocabulario en diferentes idiomas.</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>2. En el modelo de comunicación, el **emisor** es:</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="A" /> A) La persona o entidad que emite el mensaje.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="B" /> B) La persona que recibe el mensaje.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="C" /> C) El canal por el que se envía el mensaje.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="D" /> D) El medio físico utilizado para transmitir el mensaje.</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>3. ¿Cuál de las siguientes es una **barrera semántica** en la comunicación?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="A" /> A) Ruido de fondo que dificulta escuchar el mensaje.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="B" /> B) Diferencias culturales entre emisor y receptor.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="C" /> C) Utilización de términos técnicos que el receptor no entiende.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="D" /> D) La falta de interés en el mensaje por parte del receptor.</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>4. ¿Cuál es el objetivo principal de la **retroalimentación** en la comunicación?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="A" /> A) Verificar si el mensaje ha sido comprendido correctamente.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="B" /> B) Mejorar el vocabulario del emisor.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="C" /> C) Repetir el mensaje varias veces.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="D" /> D) Cambiar el tema de la conversación.</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>5. Un **texto expositivo** se caracteriza por:</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="A" /> A) Contener elementos ficticios y personajes imaginarios.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="B" /> B) Persuadir al lector para que adopte una opinión.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="C" /> C) Usar lenguaje coloquial e informal.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="D" /> D) Explicar ideas o conceptos de manera objetiva.</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>6. Completa el siguiente ejercicio y selecciona la respuesta correcta:  
+                Identifica el tipo de oración: “Me gustaría saber la razón por la cual no asististe a la reunión”</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="A" /> A) Exhortativa</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="B" /> B) Enunciativa</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="C" /> C) Dubitativa</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="D" /> D) Interrogativa indirecta</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>7. ¿Qué función del lenguaje predomina en el siguiente enunciado? "¡Qué hermosa es la naturaleza!"</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="A" /> A) Función referencial</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="B" /> B) Función expresiva</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="C" /> C) Función apelativa</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="D" /> D) Función fática</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>8. En el proceso de redacción de un texto, la **revisión** se realiza para:</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="A" /> A) Comprobar la coherencia, cohesión y corrección del contenido.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="B" /> B) Completar el número mínimo de palabras del texto.</label>
+                
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="C" /> C) Agregar información adicional irrelevante.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="D" /> D) Verificar únicamente la ortografía y gramática.</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>9. ¿Cuál de los siguientes enunciados es un ejemplo de **argumento de autoridad**?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="A" /> A) "Las personas tienden a aprender más rápido cuando están motivadas."</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="B" /> B) "La motivación es esencial en el proceso educativo."</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="C" /> C) "Según el profesor Pérez, experto en psicología, la motivación mejora el aprendizaje."</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="D" /> D) "Algunos estudiantes no necesitan motivación para aprender."</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>10. La **coherencia** en un texto significa:</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="A" /> A) Que el texto usa vocabulario complejo y variado.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="B" /> B) Que las ideas del texto están bien conectadas y son lógicas.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="C" /> C) Que el texto no contiene errores gramaticales.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="D" /> D) Que el texto sigue una estructura fija y rígida.</label>
+            </div>
+    
+            <button (click)="submitForm()">Enviar</button>
+    
+        </div>
+    </section>    
 
     <aside class="sidebar-right">
         <div class="status-icons">

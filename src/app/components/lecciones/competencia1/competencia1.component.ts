@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-competencia1',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './competencia1.component.html',
   styleUrl: './competencia1.component.css'
 })
-export class Competencia1Component {
+export class Competencia1Component implements OnInit {
   constructor(private router: Router) {}
-
+  correctAnswers = ['B', 'A', 'C', 'A', 'D', 'D', 'B', 'A', 'C', 'B']; //ESTAS SON LAS RESPUESTAS CORRECTAS DE LAS PREGUNTAS
+  userAnswers: string[] = new Array(this.correctAnswers.length).fill('');
+  score: number = -1;
   racha = 0;
   cactusCoins = 0.0;
   fechaActual = new Date();
@@ -26,6 +29,19 @@ export class Competencia1Component {
   cargarEstadoDarkMode(): void {
     const modoOscuroGuardado = localStorage.getItem('isDarkMode');
     this.isDarkMode = modoOscuroGuardado === 'true';
+  }
+
+  submitForm() {
+    this.score = this.userAnswers.reduce((acc, answer, index) => {
+      return acc + (answer === this.correctAnswers[index] ? 1 : 0);
+    }, 0);
+
+    console.log("Puntuación obtenida:", this.score);
+    this.cactusCoins = this.score;
+    window.alert("Respuestas enviadas correctamente.");
+    
+    //this.router.navigate(['/semestres/semestre2']);
+    
   }
 
   generarCalendario(): void {
@@ -46,5 +62,4 @@ export class Competencia1Component {
   navegar(ruta: string): void {
     this.router.navigate([ruta]);
   }
-
 }

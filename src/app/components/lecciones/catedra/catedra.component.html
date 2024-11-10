@@ -1,1 +1,201 @@
-<p>catedra works!</p>
+<main class="main-layout" [ngClass]="{ 'dark-mode': isDarkMode }">
+    <aside class="sidebar">
+        <h2>GUAJIRA LEARN</h2>
+        <button class="menu-button" style="background-color: #e2a23e;">Estudiar</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Clasificación</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Tienda</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Perfil</button>
+        <div class="spacer"></div>
+        <button class="logout-button" (click)="cerrarSesion()">Cerrar sesión</button>
+    </aside>
+
+    <section class="content">
+        <h2>CATEDRA UNIGUAJIRA</h2>
+
+        <div class="question-form">
+            
+            <div class="question">
+                <p><strong>1. ¿Cuál es el objetivo principal de la Cátedra Uniguajira?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="A" /> A) Fomentar el conocimiento sobre la historia de la región.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="B" /> B) Desarrollar habilidades matemáticas.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="C" /> C) Enseñar programación avanzada.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="D" /> D) Instruir en metodologías científicas.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>2. ¿En qué año se fundó la Universidad de La Guajira?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="A" /> A) 1950
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="B" /> B) 1970
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="C" /> C) 1981
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="D" /> D) 1995
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>3. ¿Qué tema es fundamental en la Cátedra Uniguajira?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="A" /> A) La biodiversidad de La Guajira.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="B" /> B) Matemáticas avanzadas.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="C" /> C) Programación de software. 
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="D" /> D) Principios de economía global. 
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>4. ¿Cuál es la importancia de la cultura wayuu en la Cátedra Uniguajira?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="A" /> A) Reflejar la identidad cultural de la región.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="B" /> B) Enseñar técnicas de agricultura.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="C" /> C) Promover deportes regionales.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="D" /> D) Desarrollar habilidades en finanzas.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>5. ¿Qué aspectos de la economía guajira se estudian en esta clase?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="A" /> A) Exportación de productos agrícolas.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="B" /> B) Impacto del turismo y de las energías renovables.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="C" /> C) Comercio internacional de tecnología.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="D" /> D) Estrategias bancarias.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>6. ¿Cómo se busca fortalecer la identidad cultural en la Cátedra Uniguajira?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="A" /> A) A través del estudio de literatura universal. 
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="B" /> B) Por medio de actividades tradicionales y artesanías.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="C" /> C) Analizando estructuras matemáticas.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="D" /> D) Mediante estudios de derecho internacional.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>7. ¿Qué significa el término "cosmogonía" en el contexto de la Cátedra Uniguajira?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="A" /> A) Historia de los ritos indígenas.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="B" /> B) Conjunto de creencias sobre el origen del mundo.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="C" /> C) Estudio de los ecosistemas naturales.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="D" /> D) Una técnica de agricultura sustentable.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>8. ¿Qué sector de la economía guajira es más estudiado en la cátedra?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="A" /> A) Turismo y comercio.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="B" /> B) Tecnología e innovación.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="C" /> C) Agricultura y pesca.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="D" /> D) Minería y energía.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>9. ¿Por qué es importante la diversidad lingüística en la Cátedra Uniguajira?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="A" /> A) Para promover la educación multilingüe.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="B" /> B) Porque refleja la identidad y riqueza cultural.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="C" /> C) Facilita el aprendizaje de idiomas extranjeros.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="D" /> D) Permite analizar técnicas de traducción.
+                  </label>
+            </div>
+
+            <div class="question">
+                <p><strong>10. ¿Cuál es un valor central en la cultura wayuu destacado en la Cátedra Uniguajira?</strong></p>
+                <label>
+                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="A" /> A) La competencia individual.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="B" /> B) El respeto y la solidaridad comunitaria.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="C" /> C) La independencia económica.
+                  </label>
+                  <label>
+                    <input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="D" /> D) La adopción de tecnología avanzada.
+                  </label>
+            </div>
+
+            <button (click)="submitForm()">Enviar</button>
+
+        </div>
+
+    </section>
+
+    <aside class="sidebar-right">
+        <div class="status-icons">
+            <p>🔥 {{ racha }} 🌵 {{ cactusCoins }}</p>
+            <div class="theme-toggle">
+                <button (click)="toggleDarkMode()" class="switch" [ngClass]="{ 'active': isDarkMode }">
+                    <span class="slider"></span>
+                </button>
+                <label>🌙 Tema oscuro</label>
+            </div>
+        </div>
+        <div class="calendar-container">
+            <h3 class="calendar-title">Calendario</h3>
+            <p class="calendar-date">{{ fechaActual | date:'MMMM yyyy' }}</p>
+            <div class="calendar-grid">
+                <span *ngFor="let day of diasMes">{{ day }}</span>
+            </div>
+        </div>
+    </aside>
+</main>

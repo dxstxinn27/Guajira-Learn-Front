@@ -1,1 +1,128 @@
-<p>logica works!</p>
+<main class="main-layout" [ngClass]="{ 'dark-mode': isDarkMode }">
+    <aside class="sidebar">
+        <h2>GUAJIRA LEARN</h2>
+        <button class="menu-button" style="background-color: #e2a23e;">Estudiar</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Clasificación</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Tienda</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Perfil</button>
+        <div class="spacer"></div>
+        <button class="logout-button" (click)="cerrarSesion()">Cerrar sesión</button>
+    </aside>
+
+    <section class="content">
+        <h2>LÓGICA Y TEORÍA DE CONJUNTOS</h2>
+    
+        <div class="question-form">
+    
+            <div class="question">
+                <p><strong>1. Dada la proposición p: "Todos los estudiantes en la clase aprobarán el examen". ¿Cuál es la negación de p?</strong></p>
+                
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="A" /> A) Todos los estudiantes en la clase reprobarán el examen.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="B" /> B) Al menos un estudiante en la clase no aprobará el examen.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="C" /> C) Todos los estudiantes en la clase aprobarán el examen, pero no todos pasarán el curso.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[0]" name="question1" value="D" /> D) Ningún estudiante en la clase aprobará el examen.</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>2. Sean A = {{ '{' }}1, 2, 3, 4{{ '}' }} y B = {{ '{' }}3, 4, 5, 6{{ '}' }}. ¿Cuál es el conjunto A ∪ B?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="A" /> A) {{ '{' }}1, 2, 3, 4, 5, 6{{ '}' }}</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="B" /> B) {{ '{' }}1, 2, 3, 4{{ '}' }}</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="C" /> C) {{ '{' }}3, 4{{ '}' }}</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[1]" name="question2" value="D" /> D) {{ '{' }}1, 2, 5, 6{{ '}' }}</label>
+                
+            </div>
+    
+            <div class="question">
+                <p><strong>3. Si p y q son proposiciones tales que p ⇒ q, ¿cuál de las siguientes afirmaciones es equivalente a ¬q ⇒ ¬p?</strong></p>
+                
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="A" /> A) Recíproco</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="B" /> B) Inverso</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="C" /> C) Contraposición</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[2]" name="question3" value="D" /> D) Conjunción</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>4. Sean A = {{ '{' }}x ∈ ℤ | x ≥ 5{{ '}' }} y B = {{ '{' }}x ∈ ℤ | x < 7{{ '}' }}. ¿Cuál es el conjunto A ∩ B?</strong></p>
+                
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="A" /> A) {{ '{' }}7, 8{{ '}' }}</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="B" /> B) {{ '{' }}5, 6, 7{{ '}' }}</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="C" /> C) {{ '{' }}5, 6, 7, 8{{ '}' }}</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[3]" name="question4" value="D" /> D) {{ '{' }}5, 6{{ '}' }}</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>5. Determina la validez del siguiente argumento usando tablas de verdad: Si p entonces q. ¬q. Entonces, ¬p.</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="A" /> A) Válido</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="B" /> B) Inválido</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="C" /> C) No se puede determinar</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[4]" name="question5" value="D" /> D) Contradictorio</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>6. Si A ⊆ B y B ⊆ C, ¿cuál de las siguientes afirmaciones es verdadera?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="A" /> A) A ∩ C = A</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="B" /> B) A ⊆ C</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="C" /> C) A ∪ C = B</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[5]" name="question6" value="D" /> D) C ⊆ A</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>7. Dado el conjunto C = {{ '{' }}x | x² < 9{{ '}' }}, ¿cuál es el conjunto solución de C?</strong></p>
+                
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="A" /> A) {{ '{' }}-2, -1, 0, 1, 2{{ '}' }}</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="B" /> B) {{ '{' }}0, 1, 2, 3{{ '}' }}</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="C" /> C) {{ '{' }}-3, -2, -1, 0, 1, 2, 3{{ '}' }}</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[6]" name="question7" value="D" /> D) {{ '{' }}-3, 3{{ '}' }}</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>8. Dados los conjuntos A = {{ '{' }}1, 2, 3, 4{{ '}' }} y B = {{ '{' }}3, 4, 5, 6{{ '}' }}, calcula A - B.</strong></p>
+                
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="A" /> A) {{ '{' }}5, 6{{ '}' }}</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="B" /> B) {{ '{' }}1, 2{{ '}' }}</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="C" /> C) {{ '{' }}3, 4{{ '}' }}</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[7]" name="question8" value="D" /> D) {{ '{' }}1, 2, 5, 6{{ '}' }}</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>9. Considera el siguiente conjunto: D = {{ '{' }}x ∈ ℕ | x es primo y x < 10{{ '}' }}. ¿Cuál es el conjunto D?</strong></p>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="A" /> A) {{ '{' }}2, 3, 5, 7{{ '}' }}</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="B" /> B) {{ '{' }}2, 3, 5{{ '}' }}</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="C" /> C) {{ '{' }}1, 2, 3, 5, 7{{ '}' }}</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[8]" name="question9" value="D" /> D) {{ '{' }}1, 2, 3, 5{{ '}' }}</label>
+            </div>
+    
+            <div class="question">
+                <p><strong>10. La implicación p ⇒ q es falsa solamente cuando:</strong></p>
+                
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="A" /> A) p es verdadero y q es falso.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="B" /> B) p es verdadero y q es verdadero.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="C" /> C) p es falso y q es falso.</label>
+                <label><input type="radio" [(ngModel)]="userAnswers[9]" name="question10" value="D" /> D) p es falso y q es verdadero.</label>
+            </div>
+    
+            <button (click)="submitForm()">Enviar</button>
+    
+        </div>
+    </section>
+    
+
+    <aside class="sidebar-right">
+        <div class="status-icons">
+            <p>🔥 {{ racha }} 🌵 {{ cactusCoins }}</p>
+            <div class="theme-toggle">
+                <button (click)="toggleDarkMode()" class="switch" [ngClass]="{ 'active': isDarkMode }">
+                    <span class="slider"></span>
+                </button>
+                <label>🌙 Tema oscuro</label>
+            </div>
+        </div>
+        <div class="calendar-container">
+            <h3 class="calendar-title">Calendario</h3>
+            <p class="calendar-date">{{ fechaActual | date:'MMMM yyyy' }}</p>
+            <div class="calendar-grid">
+                <span *ngFor="let day of diasMes">{{ day }}</span>
+            </div>
+        </div>
+    </aside>
+</main>
