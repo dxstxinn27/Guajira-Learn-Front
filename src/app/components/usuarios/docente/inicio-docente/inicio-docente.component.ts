@@ -49,6 +49,7 @@ export class InicioDocenteComponent implements OnInit {
   }
 
   cerrarSesion(): void {
+    this.router.navigate(['usuarios/docente/iniciar-sesion']);
     console.log('Sesión cerrada');
   }
 
