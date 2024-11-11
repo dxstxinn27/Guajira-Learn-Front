@@ -1,0 +1,274 @@
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1rem;
+  height: 100vh;
+}
+
+.sidebar,
+.sidebar-right {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.menu-button,
+.logout-button {
+  width: 100%;
+  margin: 0.5rem 0;
+  color: white;
+  font-weight: bold;
+  padding: 0.8rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-button {
+  background-color: #e2a23e;
+}
+
+.logout-button {
+  background-color: #cd5c4f;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.menu-button:hover,
+.logout-button:hover {
+  background-color: #d9823e;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.lesson-card {
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-button {
+  background-color: #60a9b9;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+
+.status-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.switch {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.switch.active {
+  background-color: #333;
+}
+
+.switch .slider {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.switch.active .slider {
+  transform: translateX(20px);
+}
+
+.calendar-container {
+  border: 2px solid #ffd700;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.calendar-title {
+  font-weight: bold;
+  color: #996600;
+  margin-bottom: 0.5rem;
+}
+
+.calendar-date {
+  font-weight: bold;
+  color: #996600;
+  margin-bottom: 1rem;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.calendar-grid span {
+  display: inline-block;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.calendar-grid span:nth-child(8n-1),
+.calendar-grid span:nth-child(8n) {
+  color: red;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+.dark-mode .sidebar,
+.dark-mode .sidebar-right {
+  background-color: #444;
+}
+
+.dark-mode .menu-button,
+.dark-mode .logout-button {
+  background-color: #555;
+}
+
+.dark-mode .menu-button:hover,
+.dark-mode .logout-button:hover {
+  background-color: #666;
+}
+
+.dark-mode .lesson-card {
+  background-color: #555;
+  color: #f5f5f5;
+}
+
+.dark-mode .calendar-container {
+  border-color: #666;
+}
+
+.dark-mode .calendar-title,
+.dark-mode .calendar-date {
+  color: #ffd700;
+}
+
+
+.dashboard-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #000000;  /* Cambiado a negro */
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.card.full-width {
+  grid-column: span 2;
+}
+
+.h2 {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+p {
+  color: #bbbbbb;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.btn-actividad {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-actividad:hover {
+  background-color: #45a049;
+}
+
+.quick-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quick-links a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 5px 0;
+  padding: 8px 0;
+  width: 100%;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.quick-links a:hover {
+  background-color: #333333;
+  color: #ffffff;
+}

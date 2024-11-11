@@ -26,6 +26,7 @@ import { HumanidadesComponent } from './components/lecciones/humanidades/humanid
 import { authGuard } from './auth.guard';
 import { PerfilEstudianteComponent } from './components/usuarios/estudiante/perfil-estudiante/perfil-estudiante.component';
 import { TiendaEstudianteComponent } from './components/usuarios/estudiante/tienda-estudiante/tienda-estudiante.component';
+import { OpenaiComponent } from './components/openai/openai.component';
 
 export const routes: Routes = [
     {
@@ -74,4 +75,6 @@ export const routes: Routes = [
     { path: "lecciones/competencia2", component: Competencia2Component, canActivate: [authGuard] },
     { path: "lecciones/humanidades", component: HumanidadesComponent, canActivate: [authGuard] },
 
+    // PARA LA IA
+    { path: "openai", component: OpenaiComponent },
 ];

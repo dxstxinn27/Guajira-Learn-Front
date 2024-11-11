@@ -1,1 +1,68 @@
-<p>inicio-docente works!</p>
+<main class="main-layout" [ngClass]="{ 'dark-mode': isDarkMode }">
+    <aside class="sidebar">
+        <h2>GUAJIRA LEARN</h2>
+        <button class="menu-button" style="background-color: #e2a23e;">Clases</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Clasificación</button>
+        <button class="menu-button" style="background-color: #e2a23e;"
+            (click)="navegar('usuarios/docente/inicio')">Perfil</button>
+        <div class="spacer"></div>
+        <button class="logout-button" (click)="cerrarSesion()">Cerrar sesión</button>
+    </aside>
+
+    <section class="dashboard-content">
+        <h1>Bienvenido, {{ docente?.nombre }} {{ docente?.apellido }}</h1>
+
+        <div class="grid">
+            <div class="card">
+                <h2 class="h2">Actividades Recientes</h2>
+                <p>Revisiones pendientes, mensajes nuevos y más.</p>
+                <button class="btn-actividad">Ver Actividades</button>
+            </div>
+
+            <div class="card">
+                <h2 class="h2">Accesos Rápidos</h2>
+                <div class="quick-links">
+                    <a>Gestionar Clases</a>
+                    <a>Crear Tareas</a>
+                    <a>Ver Progreso Estudiantes</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="h2">Calendario</h2>
+                <p>Eventos próximos y fechas importantes.</p>
+            </div>
+
+            <div class="card">
+                <h2 class="h2">Estadísticas de Desempeño</h2>
+                <p>Progreso de los estudiantes, calificaciones y más.</p>
+                <p>80% Tareas completadas</p>
+                <p>Calificación promedio: 85%</p>
+            </div>
+
+            <div class="card full-width">
+                <h2 class="h2">Notificaciones y Mensajes</h2>
+                <p>No tienes nuevas notificaciones.</p>
+            </div>
+        </div>
+    </section>
+
+    <aside class="sidebar-right">
+        <div class="status-icons">
+            <div class="theme-toggle">
+                <button (click)="toggleDarkMode()" class="switch" [ngClass]="{ 'active': isDarkMode }">
+                    <span class="slider"></span>
+                </button>
+                <label>🌙 Tema oscuro</label>
+            </div>
+        </div>
+        <div class="calendar-container">
+            <h3 class="calendar-title">Calendario</h3>
+            <p class="calendar-date">{{ fechaActual | date:'MMMM yyyy' }}</p>
+            <div class="calendar-grid">
+                <span *ngFor="let day of diasMes">{{ day }}</span>
+            </div>
+        </div>
+    </aside>
+
+</main>

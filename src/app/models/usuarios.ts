@@ -26,6 +26,7 @@ export interface EstudianteI {
 // Docente.ts
 export interface DocenteI {
     id?: number;
+    docente: DocenteI;
     nombre: string;
     apellido: string;
     numero_id: number;

@@ -1,0 +1,69 @@
+<main class="main-layout" [ngClass]="{ 'dark-mode': isDarkMode }">
+    <aside class="sidebar">
+        <h2>GUAJIRA LEARN</h2>
+        <button class="menu-button" style="background-color: #e2a23e;"
+            (click)="navegar('usuarios/estudiante/inicio')">Estudiar</button>
+        <button class="menu-button" style="background-color: #e2a23e;">Clasificación</button>
+        <button class="menu-button" style="background-color: #e2a23e;"
+            (click)="navegar('usuarios/estudiante/tienda')">Tienda</button>
+        <button class="menu-button" style="background-color: #e2a23e;"
+            (click)="navegar('usuarios/estudiante/perfil')">Perfil</button>
+        <div class="spacer"></div>
+        <button class="logout-button" (click)="cerrarSesion()">Cerrar sesión</button>
+    </aside>
+
+    <section class="content">
+        <div class="row" center-xs>
+            <div class="col-xs-11 col-sm-7 col-md-5 col-lg-4">
+                <h1 class="title">¿En qué puedo ayudarte?</h1>
+
+                <div class="card">
+                    <div class="content vh-100" #contentChat>
+                        @for (chat of chats; track $index) {
+                        @if (chat.type === 'USER') {
+                        <div class="message-user">
+                            <div class="message-user-text">{{ chat.message }}</div>
+                        </div>
+                        } @else {
+                        <div class="message-gpt">
+                            <div class="icon-message-gpt">
+                                <img class="icon"
+                                    src="images/icono_guajiralearn.png"
+                                    alt="gpt">
+                            </div>
+                            <div class="content-message-gpt">
+                                <p class="message-gpt-text" [innerHTML]="chat.message"></p>
+                            </div>
+                        </div>
+                        }
+                        }
+                    </div>
+                </div>
+
+                <div>
+                    <input (keydown.enter)="sendMessage(txtInput.value)" #txtInput type="text" placeholder="Escribir..."
+                        class="input" autocomplete="off" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <aside class="sidebar-right">
+        <div class="status-icons">
+            <p>🔥 {{ racha }} 🌵 {{ cactusCoins }}</p>
+            <div class="theme-toggle">
+                <button (click)="toggleDarkMode()" class="switch" [ngClass]="{ 'active': isDarkMode }">
+                    <span class="slider"></span>
+                </button>
+                <label>🌙 Tema oscuro</label>
+            </div>
+        </div>
+        <div class="calendar-container">
+            <h3 class="calendar-title">Calendario</h3>
+            <p class="calendar-date">{{ fechaActual | date:'MMMM yyyy' }}</p>
+            <div class="calendar-grid">
+                <span *ngFor="let day of diasMes">{{ day }}</span>
+            </div>
+        </div>
+    </aside>
+</main>
